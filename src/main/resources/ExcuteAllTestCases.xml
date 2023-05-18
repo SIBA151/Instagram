@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Instagram" >
+	<listeners>
+		<listener
+			class-name="com.instagram.qa.TestComponents.Listeners" />
+	</listeners>
+	<test name="ExecuteAllTC">
+		<classes>
+			<class name="com.instagram.qa.PageTest.LoginPageTest" />
+			<class name="com.instagram.qa.PageTest.HomePageTest" />
+			<class name="com.instagram.qa.PageTest.ReelsPageTest" />
+			<class name="com.instagram.qa.PageTest.CreatPageTest" />
+		</classes>
+	</test>
+</suite>

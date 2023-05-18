@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Instagram]">
+  <listeners>
+    <listener class-name="com.instagram.qa.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="ExecuteAllTC(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.instagram.qa.PageTest.CreatPageTest">
+        <methods>
+          <include name="verifyCreatPageLabel"/>
+          <include name="loginApp"/>
+          <include name="closeCreatsPage"/>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
+      <class name="com.instagram.qa.PageTest.HomePageTest">
+        <methods>
+          <include name="loginApp"/>
+          <include name="tearDown"/>
+          <include name="logoutApp"/>
+          <include name="verifyHomePagefirstPostLikeBtn"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
+    </classes>
+  </test> <!-- ExecuteAllTC(failed) -->
+</suite> <!-- Failed suite [Instagram] -->
