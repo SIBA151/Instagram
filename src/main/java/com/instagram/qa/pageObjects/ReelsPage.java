@@ -13,11 +13,6 @@ public class ReelsPage extends AbstractCompnent{
 
 	WebDriver driver;
 	
-	@FindBy(xpath="//button[contains(@class, '_abl-')]//div//span//*[local-name()='svg']")
-	WebElement likeValue;
-	
-	@FindBy(xpath="//div[text()='Create new post']")
-	WebElement creatPageLabel;
 	
 	//div[text()='Create new post']
 	public By reel(int elm) {
@@ -25,6 +20,7 @@ public class ReelsPage extends AbstractCompnent{
 	}
 	
 	By likeBy=By.xpath("//span//button[@type='button']//div[contains(@class,'_abl_')]");
+	By likeValue=By.xpath("//button[contains(@class, '_abl-')]//div//span//*[local-name()='svg']");
 	
 	public ReelsPage(WebDriver driver) {
 		super(driver);
@@ -33,12 +29,14 @@ public class ReelsPage extends AbstractCompnent{
 	}
 	
 	public void clicklikeBtn() {
+		waitForElement(reel(1));
 		waitForElement(likeBy);
 		getElement(likeBy).click();	
 	}
 	
 	public String likeBtnColor() {
-		return likeValue.getAttribute("aria-label");
+		waitForElement(likeValue);
+		return getElement(likeValue).getAttribute("aria-label");
 	}
 	
 	public WebElement scrollToElm(int elm) {

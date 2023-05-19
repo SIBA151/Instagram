@@ -5,30 +5,25 @@
     <listener class-name="com.instagram.qa.TestComponents.Listeners"/>
   </listeners>
   <test thread-count="5" name="ExecuteAllTC(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
     <classes>
-      <class name="com.instagram.qa.PageTest.CreatPageTest">
-        <methods>
-          <include name="verifyCreatPageLabel"/>
-          <include name="loginApp"/>
-          <include name="closeCreatsPage"/>
-          <include name="tearDown"/>
-          <include name="initialization"/>
-        </methods>
-      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
-      <class name="com.instagram.qa.PageTest.HomePageTest">
+      <class name="com.instagram.qa.PageTest.ReelsPageTest">
         <methods>
           <include name="loginApp"/>
           <include name="tearDown"/>
           <include name="logoutApp"/>
-          <include name="verifyHomePagefirstPostLikeBtn"/>
+          <include name="initialization"/>
+          <include name="verifyLikeFirstReel"/>
+        </methods>
+      </class> <!-- com.instagram.qa.PageTest.ReelsPageTest -->
+      <class name="com.instagram.qa.PageTest.CreatPageTest">
+        <methods>
+          <include name="loginApp"/>
+          <include name="closeCreatsPage"/>
+          <include name="verifyfileUploadInstagaram"/>
+          <include name="tearDown"/>
           <include name="initialization"/>
         </methods>
-      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
+      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
     </classes>
   </test> <!-- ExecuteAllTC(failed) -->
 </suite> <!-- Failed suite [Instagram] -->

@@ -130,6 +130,7 @@ public class HomePage extends AbstractCompnent{
 	}
 	
 	public String getLikeColor(int elm) {
+		waitForElement(likeColor(elm));
 		return getElement(likeColor(elm)).getAttribute("color");
 	}
 	

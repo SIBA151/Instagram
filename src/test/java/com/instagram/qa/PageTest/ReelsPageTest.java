@@ -32,8 +32,8 @@ public class ReelsPageTest extends BaseClass {
 		logger.info("Open Reels Page");
 	}
 	
-	
-	@Test(priority=1,groups="smoke", retryAnalyzer=RetryTest.class)
+	//retryAnalyzer=RetryTest.class
+	@Test(priority=1,groups="smoke")
 	public void verifyLikeFirstReel() {	
 		logger.info("********** TestCase Verify Like FirstReel Start **********"); 
 		reelsPage.clicklikeBtn();

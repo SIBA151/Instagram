@@ -1,5 +1,6 @@
 package com.instagram.qa.pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,12 +23,12 @@ public class CreatPage extends AbstractCompnent{
 	
 	@FindBy(xpath="//div[text()='Share']")
 	WebElement shareBtn;
-	
-	@FindBy(xpath="//span[text()='Your post has been shared.']")
-	WebElement successfulShared;
+		
 	
 	@FindBy(xpath="//div//*[@aria-label='Close']")
 	WebElement close;
+	
+	By successfulShared= By.xpath("//span[text()='Your post has been shared.']");
 	
 	
 	public CreatPage(WebDriver driver) {
@@ -41,8 +42,7 @@ public class CreatPage extends AbstractCompnent{
 	}
 	
 	public void uploadPic(String name) {
-	       String s=System.getProperty("user.dir")+"\\PhotosAndVideos\\"+name;
-			fileUpload(s);	
+		fileUpload(System.getProperty("user.dir")+"\\PhotosAndVideos\\"+name);	
 	}
 	
 	public void clickNextBtn() {
@@ -58,7 +58,8 @@ public class CreatPage extends AbstractCompnent{
 	}
 	
 	public boolean successfulSharedMsg() {
-		return successfulShared.isDisplayed();
+		waitForElement(successfulShared);
+		return getElement(successfulShared).isDisplayed();
 	}
 	
 	public void fileUploadInstagaram(String name) {
