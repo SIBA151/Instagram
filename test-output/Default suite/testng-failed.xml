@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.instagram.qa.PageTest.CreatPageTest">
+      <class name="com.instagram.qa.PageTest.LoginPageTest">
         <methods>
           <include name="loginApp"/>
-          <include name="closeCreatsPage"/>
-          <include name="verifyfileUploadInstagaram"/>
           <include name="tearDown"/>
+          <include name="loginWithDifferentCrd" invocation-numbers="0"/>
           <include name="initialization"/>
         </methods>
-      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
+      </class> <!-- com.instagram.qa.PageTest.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

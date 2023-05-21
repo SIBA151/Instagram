@@ -30,7 +30,7 @@ public class BaseClass {
 	}
     
 	public void browserSetup() {
-		String broName=prop.getBrowser();
+		String broName=System.getProperty("browser")!=null ? System.getProperty("browser"):prop.getBrowser();
 
 		switch(broName.toLowerCase()){
 		case "chrome":
@@ -62,7 +62,7 @@ public class BaseClass {
 	
 	@AfterSuite(alwaysRun=true)
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 	
 

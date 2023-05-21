@@ -68,16 +68,16 @@ public class LoginPageTest extends BaseClass{
 		return ReadExcelFile.getTestData("Login");
 	}
 	
-	@Test(priority=5, dataProvider="getLoginData", enabled=false)
+	@Test(priority=5, dataProvider="getLoginData", enabled=true)
 	public void loginWithDifferentCrd(String username, String password, String scenario) {
 		logger.info("**********TestCase verify Login Test with multiple data sets Starts**********"); 	
 		
 		homePage=loginPage.loginApplication(username, password);
 		
 		if(scenario.equals("bothcorrect")) {
+			Assert.assertTrue(homePage.checkSaveYourLoginNotification());
 			homePage.clickInfoNotNowBtn();
 			homePage.clickNotNowBtn();
-			Assert.assertTrue(homePage.homePageLogo());
 			homePage.clickLogoutBtn();
 		    loginPage.clearCredentialTxt();
 			
@@ -89,6 +89,7 @@ public class LoginPageTest extends BaseClass{
 				e.printStackTrace();
 			}
 			loginPage.clearCredentialTxt();
+			notific=false;
 		}
 		logger.info("**********TestCase verify Login Test with multiple data sets Ends**********");
 	}

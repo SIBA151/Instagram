@@ -25,8 +25,8 @@ public class HomePage extends AbstractCompnent{
 	@FindBy(xpath="//img[contains(@alt, 'profile picture')]//parent :: span")
 	WebElement profile;
 	
-	@FindBy(xpath="//button[text()='Save Info']")
-	WebElement saveInfoBtn;
+	@FindBy(xpath="//div[text()='Save Your Login Info?']")
+	WebElement saveYourLoginNotification;
 	
 	@FindBy(xpath="//div[text()='Not Now']")
 	WebElement infoNotNowBtn;
@@ -104,8 +104,8 @@ public class HomePage extends AbstractCompnent{
 		return userName.getText();
 	}
 	
-	public void clickSaveInfoBtn() {
-		saveInfoBtn.click();
+	public boolean checkSaveYourLoginNotification() {
+		return saveYourLoginNotification.isDisplayed();
 	}
 	
 	public void clickInfoNotNowBtn() {
