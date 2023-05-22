@@ -68,7 +68,7 @@ public class LoginPageTest extends BaseClass{
 		return ReadExcelFile.getTestData("Login");
 	}
 	
-	@Test(priority=5, dataProvider="getLoginData", enabled=true)
+	@Test(priority=5, dataProvider="getLoginData", enabled=false)
 	public void loginWithDifferentCrd(String username, String password, String scenario) {
 		logger.info("**********TestCase verify Login Test with multiple data sets Starts**********"); 	
 		

@@ -20,21 +20,19 @@
 
   <dependencies>
     
-    <dependency>
+        <dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.8.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.5</version>
-			<scope>compile</scope>
-		</dependency>
-
-		
-		<dependency>
+        <dependency>
+           <groupId>org.testng</groupId>
+           <artifactId>testng</artifactId>
+           <version>7.7.1</version>
+           <scope>test</scope>
+        </dependency>
+        <dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>5.2.0</version>
@@ -85,6 +83,46 @@
 								<suiteXmlFiles>
 									<suiteXmlFile>
 										src/main/resources/ExtentReportGenerate.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>ExecuteAllTestCases</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>
+										src/main/resources/ExecuteAllTestCases.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>SmokeTest</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.0.0</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>
+										src/main/resources/SmokeTest.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
