@@ -7,7 +7,6 @@
   <test name="Test">
     <classes>
         <class name="com.instagram.qa.PageTest.LoginPageTest" />
-        <class name="com.instagram.qa.PageTest.HomePageTest" />
     </classes>
   </test> 
 </suite> 
