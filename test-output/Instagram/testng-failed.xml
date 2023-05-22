@@ -6,15 +6,6 @@
   </listeners>
   <test thread-count="5" name="ExecuteAllTC(failed)">
     <classes>
-      <class name="com.instagram.qa.PageTest.ReelsPageTest">
-        <methods>
-          <include name="loginApp"/>
-          <include name="tearDown"/>
-          <include name="logoutApp"/>
-          <include name="initialization"/>
-          <include name="verifyLikeFirstReel"/>
-        </methods>
-      </class> <!-- com.instagram.qa.PageTest.ReelsPageTest -->
       <class name="com.instagram.qa.PageTest.CreatPageTest">
         <methods>
           <include name="loginApp"/>

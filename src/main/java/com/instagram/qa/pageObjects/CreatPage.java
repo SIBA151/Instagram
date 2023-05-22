@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.instagram.qa.AbstractComponents.AbstractCompnent;
+import com.instagram.qa.Utility.FileUpload;
 
 public class CreatPage extends AbstractCompnent{
 
@@ -42,7 +43,7 @@ public class CreatPage extends AbstractCompnent{
 	}
 	
 	public void uploadPic(String name) {
-		fileUpload(System.getProperty("user.dir")+"\\PhotosAndVideos\\"+name);	
+		FileUpload.fileUpload(System.getProperty("user.dir")+"\\PhotosAndVideos\\"+name);	
 	}
 	
 	public void clickNextBtn() {
