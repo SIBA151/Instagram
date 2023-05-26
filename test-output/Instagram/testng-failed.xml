@@ -11,8 +11,8 @@
           <include name="loginApp"/>
           <include name="tearDown"/>
           <include name="logoutApp"/>
-          <include name="verifyHomePagefirstPostLikeBtn"/>
           <include name="initialization"/>
+          <include name="verifyHomePagefirstPostLikeBtn"/>
         </methods>
       </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
     </classes>
