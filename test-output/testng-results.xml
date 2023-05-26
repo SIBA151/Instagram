@@ -1,108 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="7" total="20" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-22T15:56:07 IST" name="Default suite" finished-at="2023-05-22T15:56:40 IST" duration-ms="33639">
+  <suite started-at="2023-05-26T10:27:00 IST" name="Instagram" finished-at="2023-05-26T10:28:01 IST" duration-ms="61317">
     <groups>
+      <group name="smoke">
+        <method signature="CreatPageTest.verifyCreatPageLabel()[pri:1, instance:com.instagram.qa.PageTest.CreatPageTest@73e132e0]" name="verifyCreatPageLabel" class="com.instagram.qa.PageTest.CreatPageTest"/>
+        <method signature="HomePageTest.verifyHomePageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" name="verifyHomePageTitleAndLogo" class="com.instagram.qa.PageTest.HomePageTest"/>
+        <method signature="LoginPageTest.verifyLoginPageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" name="verifyLoginPageTitleAndLogo" class="com.instagram.qa.PageTest.LoginPageTest"/>
+        <method signature="ReelsPageTest.verifyLikeFirstReel()[pri:1, instance:com.instagram.qa.PageTest.ReelsPageTest@71b1a49c]" name="verifyLikeFirstReel" class="com.instagram.qa.PageTest.ReelsPageTest"/>
+        <method signature="LoginPageTest.verifyLoginPageGooglePlayLink()[pri:2, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" name="verifyLoginPageGooglePlayLink" class="com.instagram.qa.PageTest.LoginPageTest"/>
+        <method signature="HomePageTest.verifyUserName()[pri:3, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" name="verifyUserName" class="com.instagram.qa.PageTest.HomePageTest"/>
+        <method signature="LoginPageTest.verifyLoginPageMicrosoftLink()[pri:3, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" name="verifyLoginPageMicrosoftLink" class="com.instagram.qa.PageTest.LoginPageTest"/>
+        <method signature="HomePageTest.verifyHomePagefirstPostLikeBtn()[pri:4, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" name="verifyHomePagefirstPostLikeBtn" class="com.instagram.qa.PageTest.HomePageTest"/>
+        <method signature="LoginPageTest.verifyLoginAppWithValiedCredentials()[pri:4, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" name="verifyLoginAppWithValiedCredentials" class="com.instagram.qa.PageTest.LoginPageTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-05-22T15:56:07 IST" name="Default test" finished-at="2023-05-22T15:56:40 IST" duration-ms="33639">
-      <class name="com.instagram.qa.PageTest.CreatPageTest">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@c4ed84]" started-at="2023-05-22T15:56:00 IST" name="initialization" finished-at="2023-05-22T15:56:07 IST" duration-ms="6574" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@c4ed84]" started-at="2023-05-22T15:56:07 IST" name="loginApp" finished-at="2023-05-22T15:56:14 IST" duration-ms="6902" status="PASS">
+    <test started-at="2023-05-26T10:27:00 IST" name="ExecuteAllTC" finished-at="2023-05-26T10:28:01 IST" duration-ms="61317">
+      <class name="com.instagram.qa.PageTest.ReelsPageTest">
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.ReelsPageTest@71b1a49c]" started-at="2023-05-26T10:27:28 IST" name="loginApp" finished-at="2023-05-26T10:27:34 IST" duration-ms="6589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method signature="verifyfileUploadInstagaram()[pri:2, instance:com.instagram.qa.PageTest.CreatPageTest@c4ed84]" started-at="2023-05-22T15:56:14 IST" name="verifyfileUploadInstagaram" finished-at="2023-05-22T15:56:40 IST" duration-ms="26391" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Next']"}
-  (Session info: chrome=113.0.5672.127)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8e889a0c72e9a4395192cfd48df6672b, findElement {using=xpath, value=//div[text()='Next']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\rsreddy\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61788/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8e889a0c72e9a4395192cfd48df6672b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Next']"}
-  (Session info: chrome=113.0.5672.127)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8e889a0c72e9a4395192cfd48df6672b, findElement {using=xpath, value=//div[text()='Next']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\rsreddy\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61788/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8e889a0c72e9a4395192cfd48df6672b
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
-at com.instagram.qa.pageObjects.CreatPage.clickNextBtn(CreatPage.java:50)
-at com.instagram.qa.pageObjects.CreatPage.fileUploadInstagaram(CreatPage.java:69)
-at com.instagram.qa.PageTest.CreatPageTest.verifyfileUploadInstagaram(CreatPageTest.java:49)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="verifyLikeFirstReel()[pri:1, instance:com.instagram.qa.PageTest.ReelsPageTest@71b1a49c]" started-at="2023-05-26T10:27:34 IST" name="verifyLikeFirstReel" finished-at="2023-05-26T10:27:44 IST" duration-ms="9442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLikeFirstReel -->
+        <test-method signature="VerifytheScroolReels()[pri:2, instance:com.instagram.qa.PageTest.ReelsPageTest@71b1a49c]" started-at="2023-05-26T10:27:44 IST" name="VerifytheScroolReels" finished-at="2023-05-26T10:27:44 IST" duration-ms="407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifytheScroolReels -->
+        <test-method is-config="true" signature="logoutApp()[pri:0, instance:com.instagram.qa.PageTest.ReelsPageTest@71b1a49c]" started-at="2023-05-26T10:27:44 IST" name="logoutApp" finished-at="2023-05-26T10:27:44 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutApp -->
+      </class> <!-- com.instagram.qa.PageTest.ReelsPageTest -->
+      <class name="com.instagram.qa.PageTest.CreatPageTest">
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@73e132e0]" started-at="2023-05-26T10:27:44 IST" name="loginApp" finished-at="2023-05-26T10:27:44 IST" duration-ms="305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginApp -->
+        <test-method signature="verifyCreatPageLabel()[pri:1, instance:com.instagram.qa.PageTest.CreatPageTest@73e132e0]" started-at="2023-05-26T10:27:44 IST" name="verifyCreatPageLabel" finished-at="2023-05-26T10:27:45 IST" duration-ms="532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatPageLabel -->
+        <test-method signature="verifyfileUploadInstagaram()[pri:2, instance:com.instagram.qa.PageTest.CreatPageTest@73e132e0]" started-at="2023-05-26T10:27:45 IST" name="verifyfileUploadInstagaram" finished-at="2023-05-26T10:28:01 IST" duration-ms="15634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyfileUploadInstagaram -->
-        <test-method is-config="true" signature="closeCreatsPage()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@c4ed84]" started-at="2023-05-22T15:56:40 IST" name="closeCreatsPage" finished-at="2023-05-22T15:56:40 IST" duration-ms="274" status="PASS">
+        <test-method is-config="true" signature="closeCreatsPage()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@73e132e0]" started-at="2023-05-26T10:28:01 IST" name="closeCreatsPage" finished-at="2023-05-26T10:28:01 IST" duration-ms="571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeCreatsPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@c4ed84]" started-at="2023-05-22T15:56:40 IST" name="tearDown" finished-at="2023-05-22T15:56:40 IST" duration-ms="0" status="PASS">
+      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
+      <class name="com.instagram.qa.PageTest.LoginPageTest">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" started-at="2023-05-26T10:26:53 IST" name="initialization" finished-at="2023-05-26T10:27:00 IST" duration-ms="6807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" started-at="2023-05-26T10:27:00 IST" name="loginApp" finished-at="2023-05-26T10:27:00 IST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginApp -->
+        <test-method signature="verifyLoginPageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" started-at="2023-05-26T10:27:00 IST" name="verifyLoginPageTitleAndLogo" finished-at="2023-05-26T10:27:00 IST" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageTitleAndLogo -->
+        <test-method signature="verifyLoginPageGooglePlayLink()[pri:2, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" started-at="2023-05-26T10:27:00 IST" name="verifyLoginPageGooglePlayLink" finished-at="2023-05-26T10:27:01 IST" duration-ms="271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageGooglePlayLink -->
+        <test-method signature="verifyLoginPageMicrosoftLink()[pri:3, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" started-at="2023-05-26T10:27:01 IST" name="verifyLoginPageMicrosoftLink" finished-at="2023-05-26T10:27:01 IST" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageMicrosoftLink -->
+        <test-method signature="verifyLoginAppWithValiedCredentials()[pri:4, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" started-at="2023-05-26T10:27:01 IST" name="verifyLoginAppWithValiedCredentials" finished-at="2023-05-26T10:27:09 IST" duration-ms="8431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginAppWithValiedCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@4c5204af]" started-at="2023-05-26T10:28:02 IST" name="tearDown" finished-at="2023-05-26T10:28:03 IST" duration-ms="877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.instagram.qa.PageTest.LoginPageTest -->
+      <class name="com.instagram.qa.PageTest.HomePageTest">
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" started-at="2023-05-26T10:27:09 IST" name="loginApp" finished-at="2023-05-26T10:27:09 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginApp -->
+        <test-method signature="verifyHomePageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" started-at="2023-05-26T10:27:09 IST" name="verifyHomePageTitleAndLogo" finished-at="2023-05-26T10:27:10 IST" duration-ms="369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitleAndLogo -->
+        <test-method signature="verifyUserName()[pri:3, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" started-at="2023-05-26T10:27:10 IST" name="verifyUserName" finished-at="2023-05-26T10:27:10 IST" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserName -->
+        <test-method signature="verifyHomePagefirstPostLikeBtn()[pri:4, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" started-at="2023-05-26T10:27:10 IST" name="verifyHomePagefirstPostLikeBtn" finished-at="2023-05-26T10:27:10 IST" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePagefirstPostLikeBtn -->
+        <test-method signature="verifyScrollAndLikePost()[pri:5, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" started-at="2023-05-26T10:27:10 IST" name="verifyScrollAndLikePost" finished-at="2023-05-26T10:27:23 IST" duration-ms="12615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyScrollAndLikePost -->
+        <test-method signature="verifyLogoutButtonTest()[pri:6, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" started-at="2023-05-26T10:27:23 IST" name="verifyLogoutButtonTest" finished-at="2023-05-26T10:27:28 IST" duration-ms="4800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogoutButtonTest -->
+        <test-method is-config="true" signature="logoutApp()[pri:0, instance:com.instagram.qa.PageTest.HomePageTest@777c9dc9]" started-at="2023-05-26T10:27:28 IST" name="logoutApp" finished-at="2023-05-26T10:27:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutApp -->
+      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
+    </test> <!-- ExecuteAllTC -->
+  </suite> <!-- Instagram -->
 </testng-results>

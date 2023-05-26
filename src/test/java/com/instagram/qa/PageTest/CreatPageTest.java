@@ -23,10 +23,12 @@ public class CreatPageTest extends BaseClass {
 		homePage=new HomePage(driver);
 		
 		if(notific) {
-			homePage=loginPage.loginApplication(prop.getUsername(), prop.getPassword());
+			homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
 			homePage.clickInfoNotNowBtn();
+			if(notLogout) {
 			homePage.clickNotNowBtn();
 			}
+		}
 		//Click Creats Page Button
 		creatPage=homePage.clickCreatsBtn();
 		logger.info("Open Creat Page");
@@ -57,6 +59,7 @@ public class CreatPageTest extends BaseClass {
 		//Close Creats Page
 		creatPage.clickClosePage();
 		logger.info("Close Creat Page");
+		notific=false;
 	}
 
 }

@@ -20,7 +20,7 @@ public class HomePageTest extends BaseClass {
 		homePage=new HomePage(driver);
 		
 		if(notific) {
-		homePage=loginPage.loginApplication(prop.getUsername(), prop.getPassword());
+		homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
 		homePage.clickInfoNotNowBtn();
 		homePage.clickNotNowBtn();
 		}
@@ -44,7 +44,7 @@ public class HomePageTest extends BaseClass {
 	@Test(priority=3, groups="smoke")
 	public void verifyUserName() {
 		logger.info("***** TestCase Verify User Name starts *****"); 
-		Assert.assertEquals(homePage.getUserName(), "rsibakumar");
+		Assert.assertEquals(homePage.getUserName(), prop.getUsernam());
 		logger.info("***** TestCase Verify User Name Ends *****"); 
 	}
 	
@@ -69,13 +69,24 @@ public class HomePageTest extends BaseClass {
 		
 	}
 	
+	@Test(priority=6, enabled=true)
+	public void verifyLogoutButtonTest() {
+		logger.info("***** TestCase Verify Logout Button Test starts *****"); 
+		homePage.clickLogoutBtn();
+		Assert.assertTrue(loginPage.loginPageMicrosoftLink());
+		notLogout=false;
+		logger.info("***** TestCase Verify Logout Button Test Ends *****"); 
+	}
+	
 	@AfterClass(alwaysRun=true)
 	public void logoutApp() {
-		if(notific) {
-			homePage.clickLogoutBtn();
+		if(notLogout) {
+			notific=false;
 		}else {
-			logger.info("All TestCases tested");
+			notific=true;
 		}
+		
+		logger.info("All TestCases tested");
 	}
 	
 }

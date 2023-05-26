@@ -52,7 +52,7 @@ public class LoginPageTest extends BaseClass{
 	public void verifyLoginAppWithValiedCredentials() {
 		logger.info("***** TestCase Verify LoginApp With Valied Credentials Starts *****"); 
 		
-		homePage=loginPage.loginApplication(prop.getUsername(), prop.getPassword());
+		homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
 		homePage.clickInfoNotNowBtn();
 		homePage.clickNotNowBtn();
 		

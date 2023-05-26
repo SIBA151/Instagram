@@ -27,4 +27,12 @@ public class AbstractCompnent {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 	
+	public void waitForElementToDisappear() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

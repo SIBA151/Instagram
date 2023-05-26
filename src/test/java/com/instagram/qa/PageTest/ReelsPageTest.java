@@ -23,10 +23,12 @@ public class ReelsPageTest extends BaseClass {
 		homePage=new HomePage(driver);
 		
 		if(notific) {
-			homePage=loginPage.loginApplication(prop.getUsername(), prop.getPassword());
+			homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
 			homePage.clickInfoNotNowBtn();
+			if(notLogout) {
 			homePage.clickNotNowBtn();
 			}
+		}
 		//Click Reels Button
 		reelsPage=homePage.clickReelsBtn();
 		logger.info("Open Reels Page");
@@ -53,10 +55,8 @@ public class ReelsPageTest extends BaseClass {
 	
 	@AfterClass(alwaysRun=true)
 	public void logoutApp() {
-		if(notific) {
-			homePage.clickLogoutBtn();
-		}else {
-			logger.info("All TestCases tested");
-		}
+		notific=false;
+		logger.info("All TestCases tested");
+		
 	}
 }

@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.instagram.qa.AbstractComponents.AbstractCompnent;
@@ -29,12 +28,13 @@ public class ReelsPage extends AbstractCompnent{
 	}
 	
 	public void clicklikeBtn() {
-		waitForElement(reel(1));
+		waitForElementToDisappear();
 		waitForElement(likeBy);
 		getElement(likeBy).click();	
 	}
 	
 	public String likeBtnColor() {
+		waitForElementToDisappear();
 		waitForElement(likeValue);
 		return getElement(likeValue).getAttribute("aria-label");
 	}

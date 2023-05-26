@@ -38,7 +38,7 @@ public Properties prop;
 		}
 	}
 	
-	public String getUsername() {
+	public String getEmail() {
 		String value=prop.getProperty("email");
 		if(value!=null) {
 			return value;
@@ -52,6 +52,15 @@ public Properties prop;
 			return value;
 		}else {
 			throw new RuntimeException("Password is not available in config file");
+		}
+	}
+	
+	public String getUsernam() {
+		String value=prop.getProperty("username");
+		if(value!=null) {
+			return value;
+		}else {
+			throw new RuntimeException("Username is not available in config file");
 		}
 	}
 }

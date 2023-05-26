@@ -22,7 +22,7 @@ public class BaseClass {
 	public static ConfigRead prop;
 	public static WebDriver driver;
 	public static boolean notific= true;
-	
+	public static boolean notLogout= true;
 	public Logger logger=LogManager.getLogger("Instagram");
 
 	public BaseClass() {
@@ -48,9 +48,9 @@ public class BaseClass {
 
 		}
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
-
-		driver.get(prop.getBaseURL());
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		
 		
 	}
 
@@ -62,7 +62,7 @@ public class BaseClass {
 	
 	@AfterSuite(alwaysRun=true)
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 

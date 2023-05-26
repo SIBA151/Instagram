@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="ExecuteAllTC(failed)">
     <classes>
-      <class name="com.instagram.qa.PageTest.CreatPageTest">
+      <class name="com.instagram.qa.PageTest.HomePageTest">
         <methods>
           <include name="loginApp"/>
-          <include name="closeCreatsPage"/>
-          <include name="verifyfileUploadInstagaram"/>
           <include name="tearDown"/>
+          <include name="logoutApp"/>
+          <include name="verifyHomePagefirstPostLikeBtn"/>
           <include name="initialization"/>
         </methods>
-      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
+      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
     </classes>
   </test> <!-- ExecuteAllTC(failed) -->
 </suite> <!-- Failed suite [Instagram] -->
