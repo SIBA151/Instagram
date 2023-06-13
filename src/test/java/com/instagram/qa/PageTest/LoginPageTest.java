@@ -23,34 +23,34 @@ public class LoginPageTest extends BaseClass{
 	
 	@Test(priority=1, groups="smoke")
 	public void verifyLoginPageTitleAndLogo() {
-		logger.info("***** TestCase Verify Login Page Title And Logo starts *****");
+		logger.info("***** Verify Login Page Title And Logo starts *****");
 		
 		Assert.assertEquals(loginPage.loginPageTitle(), "Instagram");
 		logger.info("Title Test Pass");
 		Assert.assertTrue(loginPage.loginPageLogo());
 		logger.info("Logo Test Pass");
-		logger.info("***** TestCase Verify Login Page Title And Logo Ends *****"); 
+		logger.info("***** Verify Login Page Title And Logo Ends *****"); 
 	}
 	
 	@Test(priority=2, groups="smoke")
 	public void verifyLoginPageGooglePlayLink() {
-		logger.info("***** TestCase Verify Login Page Google Play Link Starts *****");
+		logger.info("***** Verify Login Page Google Play Link Starts *****");
 		Assert.assertTrue(loginPage.loginPageGooglePlayLink());
 		logger.info("Google Play Link Pass");
-		logger.info("***** TestCase Verify Verify Login Page Google Play Link Ends *****"); 	
+		logger.info("***** Verify Login Page Google Play Link Ends *****"); 	
 	}
 	
 	@Test(priority=3, groups="smoke")
 	public void verifyLoginPageMicrosoftLink() {
-		logger.info("***** TestCase Verify Login Page Google Play Link Starts *****");
+		logger.info("***** Verify Login Page Google Play Link Starts *****");
 		Assert.assertTrue(loginPage.loginPageMicrosoftLink());
 		logger.info("Google Play Link Pass");
-		logger.info("***** TestCase Verify Verify Login Page Google Play Link Ends *****"); 	
+		logger.info("***** Verify Login Page Google Play Link Ends *****"); 	
 	}
 	
 	@Test(priority=4, groups="smoke", enabled=true)
 	public void verifyLoginAppWithValiedCredentials() {
-		logger.info("***** TestCase Verify LoginApp With Valied Credentials Starts *****"); 
+		logger.info("***** Verify LoginApp With Valied Credentials Starts *****"); 
 		
 		homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
 		homePage.clickInfoNotNowBtn();
@@ -60,7 +60,7 @@ public class LoginPageTest extends BaseClass{
 		//homePage.clickLogoutBtn();
 		
 		notific=false;
-		logger.info("***** TestCase Verify LoginApp With Valied Credentials Ends *****");	
+		logger.info("***** Verify LoginApp With Valied Credentials Ends *****");	
 	}
 	
 	@DataProvider
@@ -70,7 +70,7 @@ public class LoginPageTest extends BaseClass{
 	
 	@Test(priority=5, dataProvider="getLoginData", enabled=false)
 	public void loginWithDifferentCrd(String username, String password, String scenario) {
-		logger.info("**********TestCase verify Login Test with multiple data sets Starts**********"); 	
+		logger.info("********* Verify Login Test with multiple data sets Starts**********"); 	
 		
 		homePage=loginPage.loginApplication(username, password);
 		
@@ -91,7 +91,7 @@ public class LoginPageTest extends BaseClass{
 			loginPage.clearCredentialTxt();
 			notific=false;
 		}
-		logger.info("**********TestCase verify Login Test with multiple data sets Ends**********");
+		logger.info("********** Verify Login Test with multiple data sets Ends**********");
 	}
 	
 	

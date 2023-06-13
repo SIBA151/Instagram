@@ -3,6 +3,7 @@ package com.instagram.qa.PageTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.instagram.qa.TestComponents.BaseClass;
@@ -61,10 +62,11 @@ public class HomePageTest extends BaseClass {
 	}
 	
 	@Test(priority=5)
-	public void verifyScrollAndLikePost() {
+	@Parameters("HPnumOfScroll")
+	public void verifyScrollAndLikePost(int numScrool) {
 		logger.info("***** TestCase verify Scroll And Like Post starts *****"); 
-		homePage.scrollAndLike(5);
-		Assert.assertEquals(homePage.getLikeColor(5),"rgb(255, 48, 64)");
+		homePage.scrollAndLike(numScrool);
+		Assert.assertEquals(homePage.getLikeColor(numScrool),"rgb(255, 48, 64)");
 		logger.info("***** TestCase verify Scroll And Like Post Ends *****"); 
 		
 	}

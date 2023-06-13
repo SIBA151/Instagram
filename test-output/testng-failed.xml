@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Instagram]">
+  <parameter name="HPnumOfScroll" value="5"/>
   <listeners>
     <listener class-name="com.instagram.qa.TestComponents.Listeners"/>
   </listeners>
   <test thread-count="5" name="ExecuteAllTC(failed)">
     <classes>
-      <class name="com.instagram.qa.PageTest.HomePageTest">
+      <class name="com.instagram.qa.PageTest.CreatPageTest">
         <methods>
           <include name="loginApp"/>
+          <include name="closeCreatsPage"/>
           <include name="tearDown"/>
-          <include name="logoutApp"/>
+          <include name="verifyfileUploadInstagaram"/>
           <include name="initialization"/>
-          <include name="verifyHomePagefirstPostLikeBtn"/>
         </methods>
-      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
+      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
     </classes>
   </test> <!-- ExecuteAllTC(failed) -->
 </suite> <!-- Failed suite [Instagram] -->

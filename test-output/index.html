@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Instagram">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.HomePageTest" class="method navigator-link" hash-for-method="verifyHomePagefirstPostLikeBtn">verifyHomePagefirstPostLikeBtn</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.CreatPageTest" class="method navigator-link" hash-for-method="verifyfileUploadInstagaram">verifyfileUploadInstagaram</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Instagram -->
@@ -128,6 +128,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.HomePageTest" class="method navigator-link" hash-for-method="verifyHomePageTitleAndLogo">verifyHomePageTitleAndLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.HomePageTest" class="method navigator-link" hash-for-method="verifyHomePagefirstPostLikeBtn">verifyHomePagefirstPostLikeBtn</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -162,17 +167,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.HomePageTest" class="method navigator-link" hash-for-method="verifyScrollAndLikePost">verifyScrollAndLikePost</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.HomePageTest" class="method navigator-link" hash-for-method="verifyScrollAndLikePost(5)">verifyScrollAndLikePost(5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.HomePageTest" class="method navigator-link" hash-for-method="verifyUserName">verifyUserName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Instagram" title="com.instagram.qa.PageTest.CreatPageTest" class="method navigator-link" hash-for-method="verifyfileUploadInstagaram">verifyfileUploadInstagaram</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Instagram -->
@@ -190,32 +190,113 @@
           <div class="suite-Instagram-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.instagram.qa.PageTest.HomePageTest</span>
+              <span class="class-name">com.instagram.qa.PageTest.CreatPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyHomePagefirstPostLikeBtn">
-                  </a> <!-- verifyHomePagefirstPostLikeBtn -->
-                  <span class="method-name">verifyHomePagefirstPostLikeBtn</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //article[@role=&apos;presentation&apos;][1]//div//div[3]//div//div//section//span//button//div//span//*[local-name()=&apos;svg&apos;] (tried for 15 second(s) with 500 milliseconds interval)
+                  <a name="verifyfileUploadInstagaram">
+                  </a> <!-- verifyfileUploadInstagaram -->
+                  <span class="method-name">verifyfileUploadInstagaram</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;Next&apos;]&quot;}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57898/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 076e09114ada38b2af4347f6c7394a1d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.instagram.qa.AbstractComponents.AbstractCompnent.waitForElement(AbstractCompnent.java:27)
-	at com.instagram.qa.pageObjects.HomePage.getLikeColor(HomePage.java:133)
-	at com.instagram.qa.PageTest.HomePageTest.verifyHomePagefirstPostLikeBtn(HomePageTest.java:59)
+Command: [1a07f65329aca71062111ae333acab14, findElement {using=xpath, value=//div[text()=&apos;Next&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59861}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59861/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a07f65329aca71062111ae333acab14
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.click(Unknown Source)
+	at com.instagram.qa.pageObjects.CreatPage.clickNextBtn(CreatPage.java:50)
+	at com.instagram.qa.pageObjects.CreatPage.fileUploadInstagaram(CreatPage.java:69)
+	at com.instagram.qa.PageTest.CreatPageTest.verifyfileUploadInstagaram(CreatPageTest.java:51)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 25 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Instagram-class-failed -->
+          <div class="suite-Instagram-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.instagram.qa.PageTest.ReelsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifytheScroolReels">
+                  </a> <!-- VerifytheScroolReels -->
+                  <span class="method-name">VerifytheScroolReels</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLikeFirstReel">
+                  </a> <!-- verifyLikeFirstReel -->
+                  <span class="method-name">verifyLikeFirstReel</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Instagram-class-passed -->
+          <div class="suite-Instagram-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.instagram.qa.PageTest.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHomePageTitleAndLogo">
+                  </a> <!-- verifyHomePageTitleAndLogo -->
+                  <span class="method-name">verifyHomePageTitleAndLogo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHomePagefirstPostLikeBtn">
+                  </a> <!-- verifyHomePagefirstPostLikeBtn -->
+                  <span class="method-name">verifyHomePagefirstPostLikeBtn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogoutButtonTest">
+                  </a> <!-- verifyLogoutButtonTest -->
+                  <span class="method-name">verifyLogoutButtonTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyScrollAndLikePost(5)">
+                  </a> <!-- verifyScrollAndLikePost(5) -->
+                  <span class="method-name">verifyScrollAndLikePost</span>
+                  <span class="parameters">(5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserName">
+                  </a> <!-- verifyUserName -->
+                  <span class="method-name">verifyUserName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Instagram-class-passed -->
           <div class="suite-Instagram-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -265,71 +346,6 @@ Session ID: 076e09114ada38b2af4347f6c7394a1d
                   <span class="method-name">verifyCreatPageLabel</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyfileUploadInstagaram">
-                  </a> <!-- verifyfileUploadInstagaram -->
-                  <span class="method-name">verifyfileUploadInstagaram</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Instagram-class-passed -->
-          <div class="suite-Instagram-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.instagram.qa.PageTest.HomePageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyHomePageTitleAndLogo">
-                  </a> <!-- verifyHomePageTitleAndLogo -->
-                  <span class="method-name">verifyHomePageTitleAndLogo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLogoutButtonTest">
-                  </a> <!-- verifyLogoutButtonTest -->
-                  <span class="method-name">verifyLogoutButtonTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyScrollAndLikePost">
-                  </a> <!-- verifyScrollAndLikePost -->
-                  <span class="method-name">verifyScrollAndLikePost</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserName">
-                  </a> <!-- verifyUserName -->
-                  <span class="method-name">verifyUserName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Instagram-class-passed -->
-          <div class="suite-Instagram-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.instagram.qa.PageTest.ReelsPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifytheScroolReels">
-                  </a> <!-- VerifytheScroolReels -->
-                  <span class="method-name">VerifytheScroolReels</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLikeFirstReel">
-                  </a> <!-- verifyLikeFirstReel -->
-                  <span class="method-name">verifyLikeFirstReel</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Instagram-class-passed -->
         </div> <!-- panel Instagram -->
@@ -342,6 +358,7 @@ Session ID: 076e09114ada38b2af4347f6c7394a1d
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Instagram&quot;&gt;
+  &lt;parameter name=&quot;HPnumOfScroll&quot; value=&quot;5&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.instagram.qa.TestComponents.Listeners&quot;/&gt;
   &lt;/listeners&gt;
@@ -432,57 +449,57 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(13);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyHomePagefirstPostLikeBtn')
+data.setCell(0, 1, 'verifyScrollAndLikePost')
 data.setCell(0, 2, 'com.instagram.qa.PageTest.HomePageTest')
-data.setCell(0, 3, 17568);
+data.setCell(0, 3, 22143);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyfileUploadInstagaram')
-data.setCell(1, 2, 'com.instagram.qa.PageTest.CreatPageTest')
-data.setCell(1, 3, 11692);
+data.setCell(1, 1, 'verifyLikeFirstReel')
+data.setCell(1, 2, 'com.instagram.qa.PageTest.ReelsPageTest')
+data.setCell(1, 3, 12689);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyLikeFirstReel')
-data.setCell(2, 2, 'com.instagram.qa.PageTest.ReelsPageTest')
-data.setCell(2, 3, 9452);
+data.setCell(2, 1, 'verifyLoginAppWithValiedCredentials')
+data.setCell(2, 2, 'com.instagram.qa.PageTest.LoginPageTest')
+data.setCell(2, 3, 11524);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyScrollAndLikePost')
-data.setCell(3, 2, 'com.instagram.qa.PageTest.HomePageTest')
-data.setCell(3, 3, 9011);
+data.setCell(3, 1, 'verifyfileUploadInstagaram')
+data.setCell(3, 2, 'com.instagram.qa.PageTest.CreatPageTest')
+data.setCell(3, 3, 9750);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyLoginAppWithValiedCredentials')
-data.setCell(4, 2, 'com.instagram.qa.PageTest.LoginPageTest')
-data.setCell(4, 3, 8739);
+data.setCell(4, 1, 'verifyHomePagefirstPostLikeBtn')
+data.setCell(4, 2, 'com.instagram.qa.PageTest.HomePageTest')
+data.setCell(4, 3, 6511);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyLogoutButtonTest')
 data.setCell(5, 2, 'com.instagram.qa.PageTest.HomePageTest')
-data.setCell(5, 3, 5657);
+data.setCell(5, 3, 6455);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyLoginPageGooglePlayLink')
 data.setCell(6, 2, 'com.instagram.qa.PageTest.LoginPageTest')
-data.setCell(6, 3, 618);
+data.setCell(6, 3, 1096);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyCreatPageLabel')
-data.setCell(7, 2, 'com.instagram.qa.PageTest.CreatPageTest')
-data.setCell(7, 3, 562);
+data.setCell(7, 1, 'VerifytheScroolReels')
+data.setCell(7, 2, 'com.instagram.qa.PageTest.ReelsPageTest')
+data.setCell(7, 3, 1046);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'VerifytheScroolReels')
-data.setCell(8, 2, 'com.instagram.qa.PageTest.ReelsPageTest')
-data.setCell(8, 3, 539);
+data.setCell(8, 1, 'verifyLoginPageTitleAndLogo')
+data.setCell(8, 2, 'com.instagram.qa.PageTest.LoginPageTest')
+data.setCell(8, 3, 513);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyLoginPageTitleAndLogo')
-data.setCell(9, 2, 'com.instagram.qa.PageTest.LoginPageTest')
-data.setCell(9, 3, 500);
+data.setCell(9, 1, 'verifyCreatPageLabel')
+data.setCell(9, 2, 'com.instagram.qa.PageTest.CreatPageTest')
+data.setCell(9, 3, 437);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyUserName')
+data.setCell(10, 1, 'verifyHomePageTitleAndLogo')
 data.setCell(10, 2, 'com.instagram.qa.PageTest.HomePageTest')
-data.setCell(10, 3, 102);
+data.setCell(10, 3, 186);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyHomePageTitleAndLogo')
+data.setCell(11, 1, 'verifyUserName')
 data.setCell(11, 2, 'com.instagram.qa.PageTest.HomePageTest')
-data.setCell(11, 3, 80);
+data.setCell(11, 3, 91);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'verifyLoginPageMicrosoftLink')
 data.setCell(12, 2, 'com.instagram.qa.PageTest.LoginPageTest')
-data.setCell(12, 3, 51);
+data.setCell(12, 3, 89);
 window.suiteTableData['Instagram']= { tableData: data, tableDiv: 'times-div-Instagram'}
 return data;
 }
@@ -506,14 +523,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.instagram.qa.PageTest.LoginPageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginWithDifferentCrd</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.instagram.qa.PageTest.CreatPageTest</span>
+              <span class="ignored-class-name">com.instagram.qa.PageTest.ReelsPageTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">initialization</span>
                 <br/>
@@ -524,14 +534,21 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.instagram.qa.PageTest.HomePageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">initialization</span>
-                <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">initialization</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.instagram.qa.PageTest.ReelsPageTest</span>
+              <span class="ignored-class-name">com.instagram.qa.PageTest.LoginPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginWithDifferentCrd</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.instagram.qa.PageTest.CreatPageTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">initialization</span>
                 <br/>
@@ -554,101 +571,101 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">loginApp</span>
-                <span class="method-start">9898 ms</span>
+                <span class="method-start">8321 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageTitleAndLogo</span>
-                <span class="method-start">10091 ms</span>
+                <span class="method-start">8493 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageGooglePlayLink</span>
-                <span class="method-start">10647 ms</span>
+                <span class="method-start">9063 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageMicrosoftLink</span>
-                <span class="method-start">11270 ms</span>
+                <span class="method-start">10162 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginAppWithValiedCredentials</span>
-                <span class="method-start">11327 ms</span>
+                <span class="method-start">10259 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.instagram.qa.PageTest.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">loginApp</span>
-                <span class="method-start">20069 ms</span>
+                <span class="method-start">21791 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitleAndLogo</span>
-                <span class="method-start">20073 ms</span>
+                <span class="method-start">21797 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUserName</span>
-                <span class="method-start">20159 ms</span>
+                <span class="method-start">21990 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyHomePagefirstPostLikeBtn</span>
-                <span class="method-start">20265 ms</span>
+                <span class="method-start">22086 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyScrollAndLikePost</span>
-                <span class="method-start">38342 ms</span>
+                <span class="method-name">verifyScrollAndLikePost(5)</span>
+                <span class="method-start">28625 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLogoutButtonTest</span>
-                <span class="method-start">47357 ms</span>
+                <span class="method-start">50771 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">logoutApp</span>
-                <span class="method-start">53016 ms</span>
+                <span class="method-start">57228 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.instagram.qa.PageTest.ReelsPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">loginApp</span>
-                <span class="method-start">53018 ms</span>
+                <span class="method-start">57235 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyLikeFirstReel</span>
-                <span class="method-start">59291 ms</span>
+                <span class="method-start">65881 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VerifytheScroolReels</span>
-                <span class="method-start">68748 ms</span>
+                <span class="method-start">78581 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">logoutApp</span>
-                <span class="method-start">69292 ms</span>
+                <span class="method-start">79634 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.instagram.qa.PageTest.CreatPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">loginApp</span>
-                <span class="method-start">69297 ms</span>
+                <span class="method-start">79636 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyCreatPageLabel</span>
-                <span class="method-start">69739 ms</span>
+                <span class="method-start">81278 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyfileUploadInstagaram</span>
-                <span class="method-start">70306 ms</span>
+                <span class="method-start">81717 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeCreatsPage</span>
-                <span class="method-start">82001 ms</span>
+                <span class="method-start">92508 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.instagram.qa.PageTest.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">83514 ms</span>
+                <span class="method-start">95644 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -4,6 +4,8 @@
 		<listener
 			class-name="com.instagram.qa.TestComponents.Listeners" />
 	</listeners>
+	<parameter  name="HPnumOfScroll" value="5" />
+	
 	<test name="ExecuteAllTC">
 		<classes>
 			<class name="com.instagram.qa.PageTest.LoginPageTest" />

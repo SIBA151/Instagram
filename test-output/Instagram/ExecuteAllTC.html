@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>12/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 26 12:06:33 IST 2023</td>
+<td>Started on:</td><td>Tue Jun 13 11:23:07 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>72 seconds (72542 ms)</td>
+<tr><td>Total time:</td><td>84 seconds (84937 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,64 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.instagram.qa.PageTest.HomePageTest.verifyHomePagefirstPostLikeBtn()'><b>verifyHomePagefirstPostLikeBtn</b><br>Test class: com.instagram.qa.PageTest.HomePageTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //article[@role=&apos;presentation&apos;][1]//div//div[3]//div//div//section//span//button//div//span//*[local-name()=&apos;svg&apos;] (tried for 15 second(s) with 500 milliseconds interval)
+<td title='com.instagram.qa.PageTest.CreatPageTest.verifyfileUploadInstagaram()'><b>verifyfileUploadInstagaram</b><br>Test class: com.instagram.qa.PageTest.CreatPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;Next&apos;]&quot;}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57898/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 076e09114ada38b2af4347f6c7394a1d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.instagram.qa.AbstractComponents.AbstractCompnent.waitForElement(AbstractCompnent.java:27)
-	at com.instagram.qa.pageObjects.HomePage.getLikeColor(HomePage.java:133)
-	at com.instagram.qa.PageTest.HomePageTest.verifyHomePagefirstPostLikeBtn(HomePageTest.java:59)
+Command: [1a07f65329aca71062111ae333acab14, findElement {using=xpath, value=//div[text()=&apos;Next&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59861}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59861/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a07f65329aca71062111ae333acab14
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.click(Unknown Source)
+	at com.instagram.qa.pageObjects.CreatPage.clickNextBtn(CreatPage.java:50)
+	at com.instagram.qa.pageObjects.CreatPage.fileUploadInstagaram(CreatPage.java:69)
+	at com.instagram.qa.PageTest.CreatPageTest.verifyfileUploadInstagaram(CreatPageTest.java:51)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace383403884", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace383403884'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //article[@role=&apos;presentation&apos;][1]//div//div[3]//div//div//section//span//button//div//span//*[local-name()=&apos;svg&apos;] (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace15288143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace15288143'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;Next&apos;]&quot;}
+  (Session info: chrome=114.0.5735.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57898}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57898/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 076e09114ada38b2af4347f6c7394a1d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.instagram.qa.AbstractComponents.AbstractCompnent.waitForElement(AbstractCompnent.java:27)
-	at com.instagram.qa.pageObjects.HomePage.getLikeColor(HomePage.java:133)
-	at com.instagram.qa.PageTest.HomePageTest.verifyHomePagefirstPostLikeBtn(HomePageTest.java:59)
+Command: [1a07f65329aca71062111ae333acab14, findElement {using=xpath, value=//div[text()=&apos;Next&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\shiva\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59861}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59861/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a07f65329aca71062111ae333acab14
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.click(Unknown Source)
+	at com.instagram.qa.pageObjects.CreatPage.clickNextBtn(CreatPage.java:50)
+	at com.instagram.qa.pageObjects.CreatPage.fileUploadInstagaram(CreatPage.java:69)
+	at com.instagram.qa.PageTest.CreatPageTest.verifyfileUploadInstagaram(CreatPageTest.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -128,8 +161,8 @@ Session ID: 076e09114ada38b2af4347f6c7394a1d
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>17</td>
-<td>com.instagram.qa.PageTest.HomePageTest@5217f3d0</td></tr>
+<td>9</td>
+<td>com.instagram.qa.PageTest.CreatPageTest@77307458</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -140,65 +173,65 @@ Session ID: 076e09114ada38b2af4347f6c7394a1d
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.instagram.qa.PageTest.ReelsPageTest.verifyLikeFirstReel()'><b>verifyLikeFirstReel</b><br>Test class: com.instagram.qa.PageTest.ReelsPageTest</td>
-<td></td>
-<td>9</td>
-<td>com.instagram.qa.PageTest.ReelsPageTest@37ebc9d8</td></tr>
-<tr>
-<td title='com.instagram.qa.PageTest.ReelsPageTest.VerifytheScroolReels()'><b>VerifytheScroolReels</b><br>Test class: com.instagram.qa.PageTest.ReelsPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.instagram.qa.PageTest.ReelsPageTest@37ebc9d8</td></tr>
-<tr>
 <td title='com.instagram.qa.PageTest.LoginPageTest.verifyLoginAppWithValiedCredentials()'><b>verifyLoginAppWithValiedCredentials</b><br>Test class: com.instagram.qa.PageTest.LoginPageTest</td>
 <td></td>
-<td>8</td>
-<td>com.instagram.qa.PageTest.LoginPageTest@72f46e16</td></tr>
-<tr>
-<td title='com.instagram.qa.PageTest.HomePageTest.verifyScrollAndLikePost()'><b>verifyScrollAndLikePost</b><br>Test class: com.instagram.qa.PageTest.HomePageTest</td>
-<td></td>
-<td>9</td>
-<td>com.instagram.qa.PageTest.HomePageTest@5217f3d0</td></tr>
-<tr>
-<td title='com.instagram.qa.PageTest.LoginPageTest.verifyLoginPageMicrosoftLink()'><b>verifyLoginPageMicrosoftLink</b><br>Test class: com.instagram.qa.PageTest.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.instagram.qa.PageTest.LoginPageTest@72f46e16</td></tr>
-<tr>
-<td title='com.instagram.qa.PageTest.LoginPageTest.verifyLoginPageTitleAndLogo()'><b>verifyLoginPageTitleAndLogo</b><br>Test class: com.instagram.qa.PageTest.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.instagram.qa.PageTest.LoginPageTest@72f46e16</td></tr>
-<tr>
-<td title='com.instagram.qa.PageTest.CreatPageTest.verifyfileUploadInstagaram()'><b>verifyfileUploadInstagaram</b><br>Test class: com.instagram.qa.PageTest.CreatPageTest</td>
-<td></td>
 <td>11</td>
-<td>com.instagram.qa.PageTest.CreatPageTest@293bb8a5</td></tr>
-<tr>
-<td title='com.instagram.qa.PageTest.LoginPageTest.verifyLoginPageGooglePlayLink()'><b>verifyLoginPageGooglePlayLink</b><br>Test class: com.instagram.qa.PageTest.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.instagram.qa.PageTest.LoginPageTest@72f46e16</td></tr>
-<tr>
-<td title='com.instagram.qa.PageTest.HomePageTest.verifyLogoutButtonTest()'><b>verifyLogoutButtonTest</b><br>Test class: com.instagram.qa.PageTest.HomePageTest</td>
-<td></td>
-<td>5</td>
-<td>com.instagram.qa.PageTest.HomePageTest@5217f3d0</td></tr>
+<td>com.instagram.qa.PageTest.LoginPageTest@37ebc9d8</td></tr>
 <tr>
 <td title='com.instagram.qa.PageTest.HomePageTest.verifyHomePageTitleAndLogo()'><b>verifyHomePageTitleAndLogo</b><br>Test class: com.instagram.qa.PageTest.HomePageTest</td>
 <td></td>
 <td>0</td>
-<td>com.instagram.qa.PageTest.HomePageTest@5217f3d0</td></tr>
+<td>com.instagram.qa.PageTest.HomePageTest@7bf9b098</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.LoginPageTest.verifyLoginPageTitleAndLogo()'><b>verifyLoginPageTitleAndLogo</b><br>Test class: com.instagram.qa.PageTest.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.instagram.qa.PageTest.LoginPageTest@37ebc9d8</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.HomePageTest.verifyLogoutButtonTest()'><b>verifyLogoutButtonTest</b><br>Test class: com.instagram.qa.PageTest.HomePageTest</td>
+<td></td>
+<td>6</td>
+<td>com.instagram.qa.PageTest.HomePageTest@7bf9b098</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.ReelsPageTest.VerifytheScroolReels()'><b>VerifytheScroolReels</b><br>Test class: com.instagram.qa.PageTest.ReelsPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.instagram.qa.PageTest.ReelsPageTest@389adf1d</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.ReelsPageTest.verifyLikeFirstReel()'><b>verifyLikeFirstReel</b><br>Test class: com.instagram.qa.PageTest.ReelsPageTest</td>
+<td></td>
+<td>12</td>
+<td>com.instagram.qa.PageTest.ReelsPageTest@389adf1d</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.HomePageTest.verifyScrollAndLikePost()'><b>verifyScrollAndLikePost</b><br>Test class: com.instagram.qa.PageTest.HomePageTest<br>Parameters: 5</td>
+<td></td>
+<td>22</td>
+<td>com.instagram.qa.PageTest.HomePageTest@7bf9b098</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.LoginPageTest.verifyLoginPageMicrosoftLink()'><b>verifyLoginPageMicrosoftLink</b><br>Test class: com.instagram.qa.PageTest.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.instagram.qa.PageTest.LoginPageTest@37ebc9d8</td></tr>
 <tr>
 <td title='com.instagram.qa.PageTest.CreatPageTest.verifyCreatPageLabel()'><b>verifyCreatPageLabel</b><br>Test class: com.instagram.qa.PageTest.CreatPageTest</td>
 <td></td>
 <td>0</td>
-<td>com.instagram.qa.PageTest.CreatPageTest@293bb8a5</td></tr>
+<td>com.instagram.qa.PageTest.CreatPageTest@77307458</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.HomePageTest.verifyHomePagefirstPostLikeBtn()'><b>verifyHomePagefirstPostLikeBtn</b><br>Test class: com.instagram.qa.PageTest.HomePageTest</td>
+<td></td>
+<td>6</td>
+<td>com.instagram.qa.PageTest.HomePageTest@7bf9b098</td></tr>
 <tr>
 <td title='com.instagram.qa.PageTest.HomePageTest.verifyUserName()'><b>verifyUserName</b><br>Test class: com.instagram.qa.PageTest.HomePageTest</td>
 <td></td>
 <td>0</td>
-<td>com.instagram.qa.PageTest.HomePageTest@5217f3d0</td></tr>
+<td>com.instagram.qa.PageTest.HomePageTest@7bf9b098</td></tr>
+<tr>
+<td title='com.instagram.qa.PageTest.LoginPageTest.verifyLoginPageGooglePlayLink()'><b>verifyLoginPageGooglePlayLink</b><br>Test class: com.instagram.qa.PageTest.LoginPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.instagram.qa.PageTest.LoginPageTest@37ebc9d8</td></tr>
 </table><p>
 </body>
 </html>
