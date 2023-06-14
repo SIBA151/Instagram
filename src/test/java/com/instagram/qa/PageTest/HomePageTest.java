@@ -75,7 +75,7 @@ public class HomePageTest extends BaseClass {
 	public void verifyLogoutButtonTest() {
 		logger.info("***** TestCase Verify Logout Button Test starts *****"); 
 		homePage.clickLogoutBtn();
-		Assert.assertTrue(loginPage.loginPageMicrosoftLink());
+		Assert.assertTrue(loginPage.LoginPageLoginBtn());
 		notLogout=false;
 		logger.info("***** TestCase Verify Logout Button Test Ends *****"); 
 	}

@@ -55,6 +55,10 @@ public class LoginPage extends AbstractCompnent{
 		return logo.isDisplayed();
 	}
 	
+	public boolean LoginPageLoginBtn() {
+		return loginBtn.isDisplayed();
+	}
+	
 	public boolean loginPageErrorMsg() {
 		return errorMsg.isDisplayed();
 	}

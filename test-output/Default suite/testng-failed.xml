@@ -5,10 +5,10 @@
     <classes>
       <class name="com.instagram.qa.PageTest.HomePageTest">
         <methods>
+          <include name="verifyLogoutButtonTest"/>
           <include name="loginApp"/>
           <include name="tearDown"/>
           <include name="logoutApp"/>
-          <include name="verifyScrollAndLikePost"/>
           <include name="initialization"/>
         </methods>
       </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
