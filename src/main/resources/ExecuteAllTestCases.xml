@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Instagram" >
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
 	<listeners>
 		<listener
 			class-name="com.instagram.qa.TestComponents.Listeners" />
 	</listeners>
 	<parameter  name="HPnumOfScroll" value="5" />
-	
 	<test name="ExecuteAllTC">
 		<classes>
 			<class name="com.instagram.qa.PageTest.LoginPageTest" />
@@ -13,5 +13,5 @@
 			<class name="com.instagram.qa.PageTest.ReelsPageTest" />
 			<class name="com.instagram.qa.PageTest.CreatPageTest" />
 		</classes>
-	</test>
+	</test> 
 </suite>
