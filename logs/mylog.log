@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [DEBUG] 2023-06-14 19:17:15.079 InternalLoggerFactory - Using Log4J2 as the default logging framework
 [DEBUG] 2023-06-14 19:17:15.100 ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
 [DEBUG] 2023-06-14 19:17:15.100 ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
@@ -73,3 +74,104 @@
 [INFO ] 2023-06-14 19:17:20.953 Instagram - ***** Verify Login Page Google Play Link Ends *****
 [INFO ] 2023-06-14 19:17:20.963 Instagram - ***** Verify LoginApp With Valied Credentials Starts *****
 [INFO ] 2023-06-14 19:17:29.791 Instagram - ***** Verify LoginApp With Valied Credentials Ends *****
+=======
+[DEBUG] 2023-06-15 10:49:16.567 InternalLoggerFactory - Using Log4J2 as the default logging framework
+[DEBUG] 2023-06-15 10:49:16.573 ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+[DEBUG] 2023-06-15 10:49:16.573 ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+[DEBUG] 2023-06-15 10:49:16.577 ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3af9aa66
+[DEBUG] 2023-06-15 10:49:16.589 PlatformDependent0 - -Dio.netty.noUnsafe: false
+[DEBUG] 2023-06-15 10:49:16.589 PlatformDependent0 - Java version: 17
+[DEBUG] 2023-06-15 10:49:16.589 PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 2023-06-15 10:49:16.590 PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+[DEBUG] 2023-06-15 10:49:16.591 PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+[DEBUG] 2023-06-15 10:49:16.591 PlatformDependent0 - java.nio.Buffer.address: available
+[DEBUG] 2023-06-15 10:49:16.592 PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+[DEBUG] 2023-06-15 10:49:16.592 PlatformDependent0 - java.nio.Bits.unaligned: available, true
+[DEBUG] 2023-06-15 10:49:16.593 PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @73700b80
+[DEBUG] 2023-06-15 10:49:16.594 PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[DEBUG] 2023-06-15 10:49:16.594 PlatformDependent - sun.misc.Unsafe: available
+[DEBUG] 2023-06-15 10:49:16.594 PlatformDependent - maxDirectMemory: 8531214336 bytes (maybe)
+[DEBUG] 2023-06-15 10:49:16.595 PlatformDependent - -Dio.netty.tmpdir: C:\Users\rsreddy\AppData\Local\Temp (java.io.tmpdir)
+[DEBUG] 2023-06-15 10:49:16.595 PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 2023-06-15 10:49:16.596 PlatformDependent - Platform: Windows
+[DEBUG] 2023-06-15 10:49:16.597 PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+[DEBUG] 2023-06-15 10:49:16.597 PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[DEBUG] 2023-06-15 10:49:16.598 CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+[DEBUG] 2023-06-15 10:49:16.598 PlatformDependent - -Dio.netty.noPreferDirect: false
+[DEBUG] 2023-06-15 10:49:16.603 PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+[DEBUG] 2023-06-15 10:49:16.618 InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[DEBUG] 2023-06-15 10:49:16.618 InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[DEBUG] 2023-06-15 10:49:16.737 JdkSslContext - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+[DEBUG] 2023-06-15 10:49:16.737 JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+[DEBUG] 2023-06-15 10:49:16.746 GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+[DEBUG] 2023-06-15 10:49:16.756 MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+[DEBUG] 2023-06-15 10:49:16.762 NioEventLoop - -Dio.netty.noKeySetOptimization: false
+[DEBUG] 2023-06-15 10:49:16.762 NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 2023-06-15 10:49:16.807 PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 2023-06-15 10:49:16.808 PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 2023-06-15 10:49:16.808 PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[DEBUG] 2023-06-15 10:49:16.808 PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+[DEBUG] 2023-06-15 10:49:16.808 PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[DEBUG] 2023-06-15 10:49:16.819 ByteBufUtil - -Dio.netty.allocator.type: pooled
+[DEBUG] 2023-06-15 10:49:16.819 ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+[DEBUG] 2023-06-15 10:49:16.819 ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[DEBUG] 2023-06-15 10:49:17.060 DefaultChannelId - -Dio.netty.processId: 13404 (auto-detected)
+[DEBUG] 2023-06-15 10:49:17.062 NetUtil - -Djava.net.preferIPv4Stack: false
+[DEBUG] 2023-06-15 10:49:17.062 NetUtil - -Djava.net.preferIPv6Addresses: false
+[DEBUG] 2023-06-15 10:49:17.076 NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[DEBUG] 2023-06-15 10:49:17.077 NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[DEBUG] 2023-06-15 10:49:17.095 DefaultChannelId - -Dio.netty.machineId: d8:f8:83:ff:fe:e7:69:5e (auto-detected)
+[DEBUG] 2023-06-15 10:49:17.126 AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+[DEBUG] 2023-06-15 10:49:17.127 AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+[DEBUG] 2023-06-15 10:49:17.127 ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2a4ac2a9
+[DEBUG] 2023-06-15 10:49:17.146 Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+[DEBUG] 2023-06-15 10:49:17.146 Recycler - -Dio.netty.recycler.ratio: 8
+[DEBUG] 2023-06-15 10:49:17.146 Recycler - -Dio.netty.recycler.chunkSize: 32
+[DEBUG] 2023-06-15 10:49:17.147 Recycler - -Dio.netty.recycler.blocking: false
+[DEBUG] 2023-06-15 10:49:17.147 Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+[DEBUG] 2023-06-15 10:49:18.114 Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
+[DEBUG] 2023-06-15 10:49:18.204 ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x3d5c9025b2e645ff
+[INFO ] 2023-06-15 10:49:20.799 Instagram - ***** Verify Login Page Title And Logo starts *****
+[INFO ] 2023-06-15 10:49:20.808 Instagram - Title Test Pass
+[INFO ] 2023-06-15 10:49:21.090 Instagram - Logo Test Pass
+[INFO ] 2023-06-15 10:49:21.090 Instagram - ***** Verify Login Page Title And Logo Ends *****
+[INFO ] 2023-06-15 10:49:21.102 Instagram - ***** Verify Login Page Google Play Link Starts *****
+[INFO ] 2023-06-15 10:49:21.247 Instagram - Google Play Link Pass
+[INFO ] 2023-06-15 10:49:21.247 Instagram - ***** Verify Login Page Google Play Link Ends *****
+[INFO ] 2023-06-15 10:49:21.249 Instagram - ***** Verify Login Page Google Play Link Starts *****
+[INFO ] 2023-06-15 10:49:21.273 Instagram - Google Play Link Pass
+[INFO ] 2023-06-15 10:49:21.273 Instagram - ***** Verify Login Page Google Play Link Ends *****
+[INFO ] 2023-06-15 10:49:21.275 Instagram - ***** Verify LoginApp With Valied Credentials Starts *****
+[INFO ] 2023-06-15 10:49:28.418 Instagram - ***** Verify LoginApp With Valied Credentials Ends *****
+[INFO ] 2023-06-15 10:49:28.421 Instagram - ***** TestCase Verify HomePage Title And Logo starts *****
+[INFO ] 2023-06-15 10:49:28.426 Instagram - HomePage Title Test pass
+[INFO ] 2023-06-15 10:49:28.444 Instagram - HomePage Logo Test pass
+[INFO ] 2023-06-15 10:49:28.444 Instagram - ***** TestCase Verify HomePageTitle And Logo Ends *****
+[INFO ] 2023-06-15 10:49:28.446 Instagram - ***** TestCase Verify User Name starts *****
+[INFO ] 2023-06-15 10:49:28.470 Instagram - ***** TestCase Verify User Name Ends *****
+[INFO ] 2023-06-15 10:49:28.471 Instagram - ***** TestCase verify HomePage first Post LikeBtn starts *****
+[INFO ] 2023-06-15 10:49:33.849 Instagram - ***** TestCase verify Scroll And Like Post starts *****
+[INFO ] 2023-06-15 10:49:50.364 Instagram - ***** TestCase Verify Logout Button Test starts *****
+[INFO ] 2023-06-15 10:49:53.643 Instagram - ***** TestCase Verify Logout Button Test Ends *****
+[INFO ] 2023-06-15 10:49:53.644 Instagram - All TestCases tested
+[INFO ] 2023-06-15 10:49:58.830 Instagram - Open Reels Page
+[INFO ] 2023-06-15 10:49:58.831 Instagram - ********** TestCase Verify Like FirstReel Start **********
+[INFO ] 2023-06-15 10:50:02.431 Instagram - Click Like Button
+[INFO ] 2023-06-15 10:50:05.504 Instagram - ********** TestCase Verify Home Page Title Ends **********
+[INFO ] 2023-06-15 10:50:05.505 Instagram - ********** TestCase Verify The Scrool Reels Starts **********
+[INFO ] 2023-06-15 10:50:05.835 Instagram - ********** TestCase Verify The Scrool Reels Ends **********
+[INFO ] 2023-06-15 10:50:05.836 Instagram - All TestCases tested
+[INFO ] 2023-06-15 10:50:05.995 Instagram - Open Creat Page
+[INFO ] 2023-06-15 10:50:05.996 Instagram - ********** TestCase Verify Creat Page Label starts **********
+[INFO ] 2023-06-15 10:50:06.424 Instagram - Creat Page Label Pass
+[INFO ] 2023-06-15 10:50:06.424 Instagram - ********** TestCase Verify Creat Page Label Ends **********
+[INFO ] 2023-06-15 10:50:06.425 Instagram - ********** TestCase Verify File Upload Instagaram starts **********
+[INFO ] 2023-06-15 10:50:12.256 Instagram - Close Creat Page
+>>>>>>> 3de923bd10d21718c19f0c3561acddb82ab088ae

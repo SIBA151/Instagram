@@ -7,15 +7,6 @@
   </listeners>
   <test thread-count="5" name="ExecuteAllTC(failed)">
     <classes>
-      <class name="com.instagram.qa.PageTest.HomePageTest">
-        <methods>
-          <include name="loginApp"/>
-          <include name="tearDown"/>
-          <include name="logoutApp"/>
-          <include name="verifyHomePagefirstPostLikeBtn"/>
-          <include name="initialization"/>
-        </methods>
-      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
       <class name="com.instagram.qa.PageTest.CreatPageTest">
         <methods>
           <include name="loginApp"/>
