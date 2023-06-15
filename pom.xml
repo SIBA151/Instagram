@@ -78,18 +78,18 @@
 
 	<profiles>
 		<profile>
-			<id>ExtentReportGenerate</id>
+			<id>ExecuteAllTestCases</id>
 			<build>
 				<pluginManagement>
 					<plugins>
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-plugin</artifactId>
-							<version>3.1.0</version>
+							<version>3.1.2</version>
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>
-										src/main/resources/ExtentReportGenerate.xml</suiteXmlFile>
+										src/main/resources/ExecuteAllTestCases.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -98,18 +98,18 @@
 			</build>
 		</profile>
 		<profile>
-			<id>ExecuteAllTestCases</id>
+			<id>ExtentReportGenerate</id>
 			<build>
 				<pluginManagement>
 					<plugins>
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-plugin</artifactId>
-							<version>3.1.0</version>
+							<version>3.1.2</version>
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>
-										src/main/resources/ExecuteAllTestCases.xml</suiteXmlFile>
+										src/main/resources/ExtentReportGenerate.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -125,7 +125,7 @@
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-plugin</artifactId>
-							<version>3.1.0</version>
+							<version>3.1.2</version>
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>

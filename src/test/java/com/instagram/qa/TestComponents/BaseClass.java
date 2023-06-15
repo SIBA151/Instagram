@@ -79,8 +79,7 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 
-		String jenkinsScreenshotPath="http://localhost:8080/job/InstagarmWithGit/ws/Screenshot/"+screenShotName+dateName + ".png";
-		
+		String jenkinsScreenshotPath="http://localhost:8080/job/InstagramWithGit/ws/Screenshot/"+screenShotName+dateName + ".png";
 		String runJenkins = System.getProperty("jenkins") != null ? jenkinsScreenshotPath : screenshotpath;
 		return runJenkins;
 	}
