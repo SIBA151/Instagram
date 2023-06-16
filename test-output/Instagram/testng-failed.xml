@@ -11,46 +11,23 @@
       </run>
     </groups>
     <classes>
-      <class name="com.instagram.qa.PageTest.HomePageTest">
-        <methods>
-          <include name="verifyUserName"/>
-          <include name="verifyHomePageTitleAndLogo"/>
-          <include name="tearDown"/>
-          <include name="loginApp"/>
-          <include name="logoutApp"/>
-          <include name="verifyHomePagefirstPostLikeBtn"/>
-          <include name="initialization"/>
-        </methods>
-      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
-      <class name="com.instagram.qa.PageTest.CreatPageTest">
-        <methods>
-          <include name="verifyCreatPageLabel"/>
-          <include name="loginApp"/>
-          <include name="closeCreatsPage"/>
-          <include name="tearDown"/>
-          <include name="initialization"/>
-        </methods>
-      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
       <class name="com.instagram.qa.PageTest.LoginPageTest">
         <methods>
           <include name="verifyLoginPageGooglePlayLink"/>
           <include name="loginApp"/>
           <include name="tearDown"/>
-          <include name="verifyLoginPageTitleAndLogo"/>
           <include name="initialization"/>
-          <include name="verifyLoginAppWithValiedCredentials"/>
-          <include name="verifyLoginPageMicrosoftLink"/>
         </methods>
       </class> <!-- com.instagram.qa.PageTest.LoginPageTest -->
-      <class name="com.instagram.qa.PageTest.ReelsPageTest">
+      <class name="com.instagram.qa.PageTest.HomePageTest">
         <methods>
+          <include name="verifyHomePageTitleAndLogo"/>
           <include name="loginApp"/>
           <include name="tearDown"/>
           <include name="logoutApp"/>
           <include name="initialization"/>
-          <include name="verifyLikeFirstReel"/>
         </methods>
-      </class> <!-- com.instagram.qa.PageTest.ReelsPageTest -->
+      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
     </classes>
   </test> <!-- ExecuteAllTC(failed) -->
 </suite> <!-- Failed suite [Instagram] -->

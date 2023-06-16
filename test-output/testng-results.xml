@@ -1,125 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="20" passed="13" failed="0" skipped="0">
+<testng-results ignored="11" total="20" passed="7" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-16T06:47:59 IST" name="Suite" finished-at="2023-06-16T06:48:52 IST" duration-ms="52957">
+  <suite started-at="2023-06-16T07:46:56 IST" name="Instagram" finished-at="2023-06-16T07:47:20 IST" duration-ms="23194">
     <groups>
       <group name="smoke">
-        <method signature="CreatPageTest.verifyCreatPageLabel()[pri:1, instance:com.instagram.qa.PageTest.CreatPageTest@29cfd92b]" name="verifyCreatPageLabel" class="com.instagram.qa.PageTest.CreatPageTest"/>
-        <method signature="HomePageTest.verifyHomePageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" name="verifyHomePageTitleAndLogo" class="com.instagram.qa.PageTest.HomePageTest"/>
-        <method signature="LoginPageTest.verifyLoginPageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" name="verifyLoginPageTitleAndLogo" class="com.instagram.qa.PageTest.LoginPageTest"/>
-        <method signature="ReelsPageTest.verifyLikeFirstReel()[pri:1, instance:com.instagram.qa.PageTest.ReelsPageTest@5cc69cfe]" name="verifyLikeFirstReel" class="com.instagram.qa.PageTest.ReelsPageTest"/>
-        <method signature="LoginPageTest.verifyLoginPageGooglePlayLink()[pri:2, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" name="verifyLoginPageGooglePlayLink" class="com.instagram.qa.PageTest.LoginPageTest"/>
-        <method signature="HomePageTest.verifyUserName()[pri:3, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" name="verifyUserName" class="com.instagram.qa.PageTest.HomePageTest"/>
-        <method signature="LoginPageTest.verifyLoginPageMicrosoftLink()[pri:3, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" name="verifyLoginPageMicrosoftLink" class="com.instagram.qa.PageTest.LoginPageTest"/>
-        <method signature="HomePageTest.verifyHomePagefirstPostLikeBtn()[pri:4, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" name="verifyHomePagefirstPostLikeBtn" class="com.instagram.qa.PageTest.HomePageTest"/>
-        <method signature="LoginPageTest.verifyLoginAppWithValiedCredentials()[pri:4, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" name="verifyLoginAppWithValiedCredentials" class="com.instagram.qa.PageTest.LoginPageTest"/>
+        <method signature="CreatPageTest.verifyCreatPageLabel()[pri:1, instance:com.instagram.qa.PageTest.CreatPageTest@5536379e]" name="verifyCreatPageLabel" class="com.instagram.qa.PageTest.CreatPageTest"/>
+        <method signature="HomePageTest.verifyHomePageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" name="verifyHomePageTitleAndLogo" class="com.instagram.qa.PageTest.HomePageTest"/>
+        <method signature="LoginPageTest.verifyLoginPageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" name="verifyLoginPageTitleAndLogo" class="com.instagram.qa.PageTest.LoginPageTest"/>
+        <method signature="ReelsPageTest.verifyLikeFirstReel()[pri:1, instance:com.instagram.qa.PageTest.ReelsPageTest@165b2f7f]" name="verifyLikeFirstReel" class="com.instagram.qa.PageTest.ReelsPageTest"/>
+        <method signature="LoginPageTest.verifyLoginPageGooglePlayLink()[pri:2, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" name="verifyLoginPageGooglePlayLink" class="com.instagram.qa.PageTest.LoginPageTest"/>
+        <method signature="HomePageTest.verifyUserName()[pri:3, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" name="verifyUserName" class="com.instagram.qa.PageTest.HomePageTest"/>
+        <method signature="LoginPageTest.verifyLoginPageMicrosoftLink()[pri:3, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" name="verifyLoginPageMicrosoftLink" class="com.instagram.qa.PageTest.LoginPageTest"/>
+        <method signature="HomePageTest.verifyHomePagefirstPostLikeBtn()[pri:4, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" name="verifyHomePagefirstPostLikeBtn" class="com.instagram.qa.PageTest.HomePageTest"/>
+        <method signature="LoginPageTest.verifyLoginAppWithValiedCredentials()[pri:4, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" name="verifyLoginAppWithValiedCredentials" class="com.instagram.qa.PageTest.LoginPageTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-06-16T06:47:59 IST" name="Test" finished-at="2023-06-16T06:48:52 IST" duration-ms="52957">
+    <test started-at="2023-06-16T07:46:56 IST" name="ExecuteAllTC" finished-at="2023-06-16T07:47:20 IST" duration-ms="23194">
       <class name="com.instagram.qa.PageTest.ReelsPageTest">
-        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.ReelsPageTest@5cc69cfe]" started-at="2023-06-16T06:48:23 IST" name="loginApp" finished-at="2023-06-16T06:48:29 IST" duration-ms="6281" status="PASS">
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.ReelsPageTest@165b2f7f]" started-at="2023-06-16T07:47:09 IST" name="loginApp" finished-at="2023-06-16T07:47:10 IST" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method signature="verifyLikeFirstReel()[pri:1, instance:com.instagram.qa.PageTest.ReelsPageTest@5cc69cfe]" started-at="2023-06-16T06:48:29 IST" name="verifyLikeFirstReel" finished-at="2023-06-16T06:48:39 IST" duration-ms="9276" status="PASS">
+        <test-method signature="verifyLikeFirstReel()[pri:1, instance:com.instagram.qa.PageTest.ReelsPageTest@165b2f7f]" started-at="2023-06-16T07:47:10 IST" name="verifyLikeFirstReel" finished-at="2023-06-16T07:47:18 IST" duration-ms="8640" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLikeFirstReel -->
-        <test-method signature="VerifytheScroolReels()[pri:2, instance:com.instagram.qa.PageTest.ReelsPageTest@5cc69cfe]" started-at="2023-06-16T06:48:39 IST" name="VerifytheScroolReels" finished-at="2023-06-16T06:48:39 IST" duration-ms="420" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifytheScroolReels -->
-        <test-method is-config="true" signature="logoutApp()[pri:0, instance:com.instagram.qa.PageTest.ReelsPageTest@5cc69cfe]" started-at="2023-06-16T06:48:39 IST" name="logoutApp" finished-at="2023-06-16T06:48:39 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logoutApp()[pri:0, instance:com.instagram.qa.PageTest.ReelsPageTest@165b2f7f]" started-at="2023-06-16T07:47:18 IST" name="logoutApp" finished-at="2023-06-16T07:47:18 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutApp -->
       </class> <!-- com.instagram.qa.PageTest.ReelsPageTest -->
       <class name="com.instagram.qa.PageTest.CreatPageTest">
-        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@29cfd92b]" started-at="2023-06-16T06:48:39 IST" name="loginApp" finished-at="2023-06-16T06:48:40 IST" duration-ms="334" status="PASS">
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@5536379e]" started-at="2023-06-16T07:47:18 IST" name="loginApp" finished-at="2023-06-16T07:47:19 IST" duration-ms="457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method signature="verifyCreatPageLabel()[pri:1, instance:com.instagram.qa.PageTest.CreatPageTest@29cfd92b]" started-at="2023-06-16T06:48:40 IST" name="verifyCreatPageLabel" finished-at="2023-06-16T06:48:40 IST" duration-ms="633" status="PASS">
+        <test-method signature="verifyCreatPageLabel()[pri:1, instance:com.instagram.qa.PageTest.CreatPageTest@5536379e]" started-at="2023-06-16T07:47:19 IST" name="verifyCreatPageLabel" finished-at="2023-06-16T07:47:19 IST" duration-ms="651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCreatPageLabel -->
-        <test-method signature="verifyfileUploadInstagaram()[pri:2, instance:com.instagram.qa.PageTest.CreatPageTest@29cfd92b]" started-at="2023-06-16T06:48:40 IST" name="verifyfileUploadInstagaram" finished-at="2023-06-16T06:48:51 IST" duration-ms="11004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyfileUploadInstagaram -->
-        <test-method is-config="true" signature="closeCreatsPage()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@29cfd92b]" started-at="2023-06-16T06:48:51 IST" name="closeCreatsPage" finished-at="2023-06-16T06:48:52 IST" duration-ms="483" status="PASS">
+        <test-method is-config="true" signature="closeCreatsPage()[pri:0, instance:com.instagram.qa.PageTest.CreatPageTest@5536379e]" started-at="2023-06-16T07:47:19 IST" name="closeCreatsPage" finished-at="2023-06-16T07:47:20 IST" duration-ms="266" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeCreatsPage -->
       </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
       <class name="com.instagram.qa.PageTest.LoginPageTest">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" started-at="2023-06-16T06:47:52 IST" name="initialization" finished-at="2023-06-16T06:47:59 IST" duration-ms="6276" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" started-at="2023-06-16T07:46:50 IST" name="initialization" finished-at="2023-06-16T07:46:56 IST" duration-ms="6209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" started-at="2023-06-16T06:47:59 IST" name="loginApp" finished-at="2023-06-16T06:47:59 IST" duration-ms="51" status="PASS">
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" started-at="2023-06-16T07:46:57 IST" name="loginApp" finished-at="2023-06-16T07:46:57 IST" duration-ms="64" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method signature="verifyLoginPageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" started-at="2023-06-16T06:47:59 IST" name="verifyLoginPageTitleAndLogo" finished-at="2023-06-16T06:47:59 IST" duration-ms="612" status="PASS">
+        <test-method signature="verifyLoginPageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" started-at="2023-06-16T07:46:57 IST" name="verifyLoginPageTitleAndLogo" finished-at="2023-06-16T07:46:57 IST" duration-ms="521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTitleAndLogo -->
-        <test-method signature="verifyLoginPageGooglePlayLink()[pri:2, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" started-at="2023-06-16T06:47:59 IST" name="verifyLoginPageGooglePlayLink" finished-at="2023-06-16T06:48:00 IST" duration-ms="162" status="PASS">
+        <test-method signature="verifyLoginPageGooglePlayLink()[pri:2, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" started-at="2023-06-16T07:46:57 IST" name="verifyLoginPageGooglePlayLink" finished-at="2023-06-16T07:46:57 IST" duration-ms="185" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at com.instagram.qa.PageTest.LoginPageTest.verifyLoginPageGooglePlayLink(LoginPageTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageGooglePlayLink -->
-        <test-method signature="verifyLoginPageMicrosoftLink()[pri:3, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" started-at="2023-06-16T06:48:00 IST" name="verifyLoginPageMicrosoftLink" finished-at="2023-06-16T06:48:00 IST" duration-ms="65" status="PASS">
+        <test-method signature="verifyLoginPageMicrosoftLink()[pri:3, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" started-at="2023-06-16T07:46:58 IST" name="verifyLoginPageMicrosoftLink" finished-at="2023-06-16T07:46:58 IST" duration-ms="63" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageMicrosoftLink -->
-        <test-method signature="verifyLoginAppWithValiedCredentials()[pri:4, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" started-at="2023-06-16T06:48:00 IST" name="verifyLoginAppWithValiedCredentials" finished-at="2023-06-16T06:48:08 IST" duration-ms="7875" status="PASS">
+        <test-method signature="verifyLoginAppWithValiedCredentials()[pri:4, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" started-at="2023-06-16T07:46:58 IST" name="verifyLoginAppWithValiedCredentials" finished-at="2023-06-16T07:47:07 IST" duration-ms="8880" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginAppWithValiedCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@8a589a2]" started-at="2023-06-16T06:48:53 IST" name="tearDown" finished-at="2023-06-16T06:48:54 IST" duration-ms="725" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.instagram.qa.PageTest.LoginPageTest@665e9289]" started-at="2023-06-16T07:47:21 IST" name="tearDown" finished-at="2023-06-16T07:47:21 IST" duration-ms="588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.instagram.qa.PageTest.LoginPageTest -->
       <class name="com.instagram.qa.PageTest.HomePageTest">
-        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" started-at="2023-06-16T06:48:08 IST" name="loginApp" finished-at="2023-06-16T06:48:08 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="loginApp()[pri:0, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" started-at="2023-06-16T07:47:07 IST" name="loginApp" finished-at="2023-06-16T07:47:07 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method signature="verifyHomePageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" started-at="2023-06-16T06:48:08 IST" name="verifyHomePageTitleAndLogo" finished-at="2023-06-16T06:48:08 IST" duration-ms="68" status="PASS">
+        <test-method signature="verifyHomePageTitleAndLogo()[pri:1, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" started-at="2023-06-16T07:47:07 IST" name="verifyHomePageTitleAndLogo" finished-at="2023-06-16T07:47:07 IST" duration-ms="18" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [IInstagram] but found [Instagram]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [IInstagram] but found [Instagram]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.instagram.qa.PageTest.HomePageTest.verifyHomePageTitleAndLogo(HomePageTest.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitleAndLogo -->
-        <test-method signature="verifyUserName()[pri:3, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" started-at="2023-06-16T06:48:08 IST" name="verifyUserName" finished-at="2023-06-16T06:48:08 IST" duration-ms="59" status="PASS">
+        <test-method signature="verifyUserName()[pri:3, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" started-at="2023-06-16T07:47:07 IST" name="verifyUserName" finished-at="2023-06-16T07:47:07 IST" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserName -->
-        <test-method signature="verifyHomePagefirstPostLikeBtn()[pri:4, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" started-at="2023-06-16T06:48:08 IST" name="verifyHomePagefirstPostLikeBtn" finished-at="2023-06-16T06:48:10 IST" duration-ms="2645" status="PASS">
+        <test-method signature="verifyHomePagefirstPostLikeBtn()[pri:4, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" started-at="2023-06-16T07:47:07 IST" name="verifyHomePagefirstPostLikeBtn" finished-at="2023-06-16T07:47:09 IST" duration-ms="2306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePagefirstPostLikeBtn -->
-        <test-method signature="verifyScrollAndLikePost(int)[pri:5, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" started-at="2023-06-16T06:48:10 IST" name="verifyScrollAndLikePost" finished-at="2023-06-16T06:48:18 IST" duration-ms="7908" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyScrollAndLikePost -->
-        <test-method signature="verifyLogoutButtonTest()[pri:6, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" started-at="2023-06-16T06:48:18 IST" name="verifyLogoutButtonTest" finished-at="2023-06-16T06:48:23 IST" duration-ms="4880" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogoutButtonTest -->
-        <test-method is-config="true" signature="logoutApp()[pri:0, instance:com.instagram.qa.PageTest.HomePageTest@6e46d9f4]" started-at="2023-06-16T06:48:23 IST" name="logoutApp" finished-at="2023-06-16T06:48:23 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logoutApp()[pri:0, instance:com.instagram.qa.PageTest.HomePageTest@71984c3]" started-at="2023-06-16T07:47:09 IST" name="logoutApp" finished-at="2023-06-16T07:47:09 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutApp -->
       </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- ExecuteAllTC -->
+  </suite> <!-- Instagram -->
 </testng-results>
