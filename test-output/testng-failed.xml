@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Instagram]">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="HPnumOfScroll" value="5"/>
   <listeners>
     <listener class-name="com.instagram.qa.TestComponents.Listeners"/>
   </listeners>
   <test thread-count="5" name="ExecuteAllTC(failed)">
     <classes>
+      <class name="com.instagram.qa.PageTest.HomePageTest">
+        <methods>
+          <include name="verifyLogoutButtonTest"/>
+          <include name="verifyUserName"/>
+          <include name="verifyHomePageTitleAndLogo"/>
+          <include name="loginApp"/>
+          <include name="tearDown"/>
+          <include name="logoutApp"/>
+          <include name="verifyScrollAndLikePost"/>
+          <include name="verifyHomePagefirstPostLikeBtn"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
       <class name="com.instagram.qa.PageTest.CreatPageTest">
         <methods>
           <include name="loginApp"/>
           <include name="closeCreatsPage"/>
-          <include name="verifyfileUploadInstagaram"/>
           <include name="tearDown"/>
+          <include name="verifyfileUploadInstagaram"/>
           <include name="initialization"/>
         </methods>
       </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
+      <class name="com.instagram.qa.PageTest.LoginPageTest">
+        <methods>
+          <include name="verifyLoginPageGooglePlayLink"/>
+          <include name="loginApp"/>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+          <include name="verifyLoginAppWithValiedCredentials"/>
+        </methods>
+      </class> <!-- com.instagram.qa.PageTest.LoginPageTest -->
     </classes>
   </test> <!-- ExecuteAllTC(failed) -->
-</suite> <!-- Failed suite [Instagram] -->
+</suite> <!-- Failed suite [Suite] -->
