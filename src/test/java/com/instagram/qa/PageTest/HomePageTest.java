@@ -32,7 +32,7 @@ public class HomePageTest extends BaseClass {
 	public void verifyHomePageTitleAndLogo() {
 		logger.info("***** TestCase Verify HomePage Title And Logo starts *****");
 		
-		Assert.assertEquals(homePage.homePageTitle(), "Instagram");
+		Assert.assertEquals(homePage.homePageTitle(), "IInstagram");
 		logger.info("HomePage Title Test pass");
 		
 		Assert.assertTrue(homePage.homePageLogo());	
