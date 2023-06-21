@@ -13,8 +13,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -34,21 +38,28 @@ public class BaseClass {
 	public void browserSetup() {
 		String broName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getBrowser();
 
-		switch (broName.toLowerCase()) {
-		case "chrome":
-			driver = new ChromeDriver();
-			break;
-		case "firefox":
-			driver = new FirefoxDriver();
-			break;
-		case "edge":
-			driver = new EdgeDriver();
-			break;
-		default:
-			driver = null;
-			break;
-
+		
+		if(broName.contains("chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			if(broName.contains("headless")) {
+	        options.addArguments("--headless=new");
+			}
+	        driver = new ChromeDriver(options);
+		}else if(broName.contains("edge")) {
+			EdgeOptions options = new EdgeOptions();
+			if(broName.contains("headless")) {
+		        options.addArguments("--headless=new");
+			}
+	        driver = new EdgeDriver(options);
+		}else if(broName.contains("firefox")) {
+			FirefoxOptions options = new FirefoxOptions();
+			if(broName.contains("headless")) {
+		        options.addArguments("--headless=new");
+			}
+			driver = new FirefoxDriver(options);
 		}
+			
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
