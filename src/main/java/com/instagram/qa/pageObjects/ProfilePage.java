@@ -1,28 +1,18 @@
 package com.instagram.qa.pageObjects;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 
-import com.instagram.qa.AbstractComponents.AbstractCompnent;
+import com.instagram.qa.AbstractComponents.BaseClass;
+import com.instagram.qa.AbstractComponents.Element;
 
-public class ProfilePage extends AbstractCompnent{
+public class ProfilePage extends BaseClass{
 
-	@FindBy(xpath="//a[contains(@class,'xeuugli ')]//h2")
-	WebElement userName;
 	
-	@FindBy(xpath="//div//div//span[contains(@class,\"_aacl _aaco _aacw _aacx _\")]")
-	WebElement fullName;
 	
-	WebDriver driver;
-	public ProfilePage(WebDriver driver) {
-		super(driver);
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
+	By userName=By.xpath("//a[contains(@class,'xeuugli ')]//h2");
+	By fullName=By.xpath("//div//div//span[contains(@class,'_aacl _aaco _aacw _aacx _')]");
 	
 	public String getUsername() {
-		return userName.getText();
+		return Element.getText(userName);
 	}
 }

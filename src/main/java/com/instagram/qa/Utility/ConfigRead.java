@@ -1,15 +1,17 @@
 package com.instagram.qa.Utility;
 
+
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigRead {
 
-public Properties prop;
+public static Properties prop;
 	
-	public ConfigRead() {
-		String filePath=System.getProperty("user.dir")+"\\Configuration\\config.properties";
+	public static Properties getProValue(String fileName) {
+		String filePath=System.getProperty("user.dir")+"/src/main/resources/properties/"+fileName+".properties";
 		try {
 		FileInputStream fis=new FileInputStream(filePath);
 		prop=new Properties();
@@ -17,50 +19,46 @@ public Properties prop;
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
+		return prop;
 	}
 	
-	
-	public String getBaseURL() {
-		String value= prop.getProperty("baseUrl");
-		if(value!=null) {
-			return value;
-		}else {
-			throw new RuntimeException("URL is not available in config file");
-		}
-	}
-	
-	public String getBrowser() {
-		String value=prop.getProperty("browser");
-		if(value!=null) {
-			return value;
-		}else {
-			throw new RuntimeException("Browser is not available in config file");
-		}
-	}
-	
-	public String getEmail() {
-		String value=prop.getProperty("email");
-		if(value!=null) {
-			return value;
-		}else {
-			throw new RuntimeException("Email is not available in config file");
-		}
-	}
-	public String getPassword() {
-		String value=prop.getProperty("password");
-		if(value!=null) {
-			return value;
-		}else {
-			throw new RuntimeException("Password is not available in config file");
-		}
-	}
-	
-	public String getUsernam() {
-		String value=prop.getProperty("username");
-		if(value!=null) {
-			return value;
-		}else {
-			throw new RuntimeException("Username is not available in config file");
-		}
-	}
+//	private static final String defaultPropertiesPath = System.getProperty("user.dir")
+//			+ "/src/main/resources/properties";
+//	private static final HashMap<String, String> propertiesMap = getAllPropertiesFiles(defaultPropertiesPath);
+//
+//	private static HashMap<String, String> getAllPropertiesFiles(String directoryPath) {
+//		File directory = new File(directoryPath);
+//		File[] fileList = directory.listFiles();
+//		HashMap<String, String> propertiesFilePathMap = new HashMap<>();
+//		if (fileList != null && fileList.length > 0) {
+//			for (File file : fileList) {
+//				if (file.isDirectory()) {
+//					propertiesFilePathMap.putAll(getAllPropertiesFiles(file.getAbsolutePath()));
+//				} else {
+//					propertiesFilePathMap.put(file.getName(), file.getAbsolutePath());
+//				}
+//			}
+//		}
+//		return propertiesFilePathMap;
+//	}
+//
+//	private static String getFilePath(String fileName) {
+//		return propertiesMap.get(fileName + ".properties");
+//	}
+//
+//	public static Properties getProperties(String fileName) {
+//		Properties propertiesFileObject = new Properties();
+//		try {
+//			FileInputStream inputStream = new FileInputStream(getFilePath(fileName));
+//			propertiesFileObject.load(new InputStreamReader(inputStream, StandardCharsets.ISO_8859_1));
+//			/*
+//			 * BufferedReader fileReader = new BufferedReader(new
+//			 * FileReader(getFilePath(fileName))); propertiesFileObject.load(fileReader);
+//			 */
+//		} catch (IOException ioException) {
+//			//logError("Error occurred while fetching properties from " + fileName + " for execution data");
+//		}
+//		return propertiesFileObject;
+//	}
+
 }

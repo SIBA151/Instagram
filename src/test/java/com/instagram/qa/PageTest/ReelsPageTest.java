@@ -5,32 +5,34 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.instagram.qa.TestComponents.BaseClass;
+import com.instagram.qa.TestComponents.BaseTest;
 import com.instagram.qa.pageObjects.HomePage;
 import com.instagram.qa.pageObjects.LoginPage;
 import com.instagram.qa.pageObjects.ReelsPage;
 import com.instagram.qa.TestComponents.RetryTest;
 
-public class ReelsPageTest extends BaseClass {
+public class ReelsPageTest extends BaseTest {
 
-	LoginPage loginPage;
-	HomePage homePage;
-	ReelsPage reelsPage;
+	LoginPage loginPage=new LoginPage();
+	HomePage homePage=new HomePage();
+	ReelsPage reelsPage = new ReelsPage();
+	
+	String mailID = instaPagesProperties.getProperty("email");
+	String password=instaPagesProperties.getProperty("password");
 	
 	@BeforeClass(alwaysRun=true)
 	public void loginApp() {
-		loginPage=new LoginPage(driver);
-		homePage=new HomePage(driver);
 		
 		if(notific) {
-			homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
-			homePage.clickInfoNotNowBtn();
+			loginPage.loginApplication(mailID, password);
+			loginPage.clickOnLoginButton();	
 			if(notLogout) {
-			homePage.clickNotNowBtn();
+				homePage.clickInfoNotNowBtn();
+			    homePage.clickNotNowBtn();
 			}
 		}
 		//Click Reels Button
-		reelsPage=homePage.clickReelsBtn();
+		homePage.clickReelsBtn();
 		logger.info("Open Reels Page");
 	}
 	

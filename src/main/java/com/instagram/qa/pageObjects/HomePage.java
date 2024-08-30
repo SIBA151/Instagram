@@ -1,50 +1,27 @@
 package com.instagram.qa.pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import com.instagram.qa.AbstractComponents.AbstractCompnent;
+import com.instagram.qa.AbstractComponents.BaseClass;
+import com.instagram.qa.AbstractComponents.Element;
 
-public class HomePage extends AbstractCompnent{
-
-	WebDriver driver;
+public class HomePage extends BaseClass{
+	By homePageLogo=By.cssSelector("svg[aria-label='Instagram']");
+	By reels=By.linkText("Reels");
+	By creat=By.linkText("Create");
+	By profile=By.xpath("//img[contains(@alt, 'profile picture')]//parent :: span");
+	By saveYourLogin=By.xpath("//div[text()='Save your login info?']");
+	By infoNotNowBtn=By.xpath("//div[text()='Not now']");
+	By notNowBtn=By.xpath("//button[text()='Not Now']");
+	By userName=By.xpath("//span//div[contains(@class, 'xeuugli')]//a");
+	By moreBtn=By.xpath("//div//*[@aria-label='Settings']");
+	By logoutBtn=By.xpath("//span//span[text()='Log out']");
+	By profileBtn=By.xpath("//img[contains(@alt,'profile picture')]");
 	
-	@FindBy(css="svg[aria-label='Instagram']")
-	WebElement homePageLogo;
 	
-	@FindBy(linkText="Reels")
-	WebElement reels;
 	
-	@FindBy(linkText="Create")
-	WebElement creat;
-	
-	@FindBy(xpath="//img[contains(@alt, 'profile picture')]//parent :: span")
-	WebElement profile;
-	
-	@FindBy(xpath="//div[text()='Save Your Login Info?']")
-	WebElement saveYourLoginNotification;
-	
-	@FindBy(xpath="//div[text()='Not Now']")
-	WebElement infoNotNowBtn;
-	
-	@FindBy(xpath="//button[text()='Not Now']")
-	WebElement notNowBtn;
-	
-	@FindBy(xpath="//span//div[contains(@class, 'xeuugli')]//a")
-	private WebElement userName;
-	
-	@FindBy(xpath="//div//*[@aria-label='Settings']")
-	private WebElement moreBtn;
-	
-	@FindBy(xpath="//span[text()='Log out']")  
-	private WebElement logoutBtn;
-	
-	@FindBy(xpath="//img[contains(@alt,'profile picture')]")  
-	private WebElement profileBtn;
 	
 	public By post(int elm) {
 		return By.xpath("//article[@role='presentation']["+elm+"]");
@@ -52,7 +29,7 @@ public class HomePage extends AbstractCompnent{
 	
 	//Like Element
 	public By likeBtn(int elm) {
-		return By.xpath("//article[@role='presentation']["+elm+"]//div//div[3]//div//div//section//span");
+		return By.xpath("//article["+elm+"]//div//div//div//div//div//div//span//div//div//span//*[local-name()='svg' and @aria-label='Like']");
 	}
 	
 	//Comment Button Element
@@ -70,16 +47,11 @@ public class HomePage extends AbstractCompnent{
 	}
 	
 	public By likeColor(int elm) {
-		return By.xpath("//article[@role='presentation']["+elm+"]//div//div[3]//div//div//section//span//button//div//span//*[local-name()='svg']");
+		return By.xpath("//article["+elm+"]//div//div//div//div//div//div//span//div//div//span//*[local-name()='svg']");
 	}
 	
-	By notNowBy=By.xpath("//button[text()='Not Now']");
 	
-	public HomePage(WebDriver driver) {
-		super(driver);
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
+	
 	
 	//Action Methods
 	
@@ -88,72 +60,77 @@ public class HomePage extends AbstractCompnent{
 	}
 	
 	public boolean homePageLogo() {
-		return homePageLogo.isDisplayed();
+		return Element.isDisplay(homePageLogo);
 	}
 	
 	public ReelsPage clickReelsBtn() {
-		reels.click();
-		return new ReelsPage(driver);
+		Element.clickElm(reels);
+		return new ReelsPage();
 	}
 	
 	public CreatPage clickCreatsBtn() {
-		creat.click();
-		return new CreatPage(driver);
+		Element.clickElm(creat);
+		return new CreatPage();
 	}
+	
 	public String getUserName() {
-		return userName.getText();
+		return Element.getText(userName);
 	}
 	
 	public boolean checkSaveYourLoginNotification() {
-		return saveYourLoginNotification.isDisplayed();
+		return Element.isDisplay(saveYourLogin);
 	}
 	
 	public void clickInfoNotNowBtn() {
-		infoNotNowBtn.click();
+		Element.waitForElement(infoNotNowBtn);
+		Element.clickElm(infoNotNowBtn);
 	}
 	
 	public void clickNotNowBtn() {
-		waitForElement(notNowBy);
-		notNowBtn.click();
+		Element.waitForElement(notNowBtn);
+		Element.clickElm(notNowBtn);
 	}
 	
 	public void postLikeBtn(int elm) {
-		 getElement(likeBtn(elm)).click();
+		Element.clickElm(likeBtn(elm));
 	}
 	
 	public void commentTextField(int elm, String txt) {
-		 getElement(commentField(elm)).sendKeys(txt);
+		Element.entryText(commentField(elm),txt);
 	}
 	
 	public String getTotalNumOfComm(int elm) {
-		 return getElement(totalNumOfComm(elm)).getText();
+		 return Element.getText(totalNumOfComm(elm));
 	}
 	
 	public String getLikeColor(int elm) {
-		waitForElement(likeColor(elm));
-		return getElement(likeColor(elm)).getAttribute("color");
+		//waitForElement(likeColor(elm));
+		return Element.getAttributeValue(likeColor(elm), "viewBox");
 	}
 	
 	public WebElement scrollToElm(int elm) {
-		return getElement(post(elm));
+		return Element.getElement(post(elm));
 	}
+	
 	public void scrollAndLike(int numScroll) {
 		Actions action=new Actions(driver);
-		for(int i=1; i<=numScroll; i++) {
-			
-			waitForElement(post(i));
+		for(int i=1; i<=numScroll; i++) {		
+			//waitForElement(post(i));
 			action.scrollToElement(scrollToElm(i)).perform();
-			waitForElement(likeBtn(i));
-			postLikeBtn(i);
-			
+			//waitForElement(likeBtn(i));
+			postLikeBtn(i);			
 		}
+	}
+	
+	public HomePage clickMoreBtn() {
+		Element.clickElm(moreBtn);
+		return this;
 	}
 	
 	//Logout Button
 	public LoginPage clickLogoutBtn() {
-		moreBtn.click();
-		logoutBtn.click();
-		return new LoginPage(driver);
+		Element.clickElm(logoutBtn);
+		return new LoginPage();
 	}
 	
 

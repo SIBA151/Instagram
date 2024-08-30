@@ -1,66 +1,64 @@
 package com.instagram.qa.PageTest;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.instagram.qa.TestComponents.BaseClass;
+import com.instagram.qa.TestComponents.BaseTest;
 import com.instagram.qa.Utility.ReadExcelFile;
 import com.instagram.qa.pageObjects.HomePage;
 import com.instagram.qa.pageObjects.LoginPage;
 
-public class LoginPageTest extends BaseClass{
+public class LoginPageTest extends BaseTest{
 	
-	LoginPage loginPage;
-	HomePage homePage;
+	LoginPage loginPage=new LoginPage();
+	HomePage homePage=new HomePage();
 	
-	@BeforeClass(alwaysRun=true)
-	public void loginApp() {
-		loginPage=new LoginPage(driver);
-		homePage=new HomePage(driver);	
-	}
+	String mailID = instaPagesProperties.getProperty("email");
+	String password=instaPagesProperties.getProperty("password");
 	
 	@Test(priority=1, groups="smoke")
-	public void verifyLoginPageTitleAndLogo() {
-		logger.info("***** Verify Login Page Title And Logo starts *****");
+	public void verifyLoginPage() {
+		logger.info("***** Verify Login Page start *****");
 		
 		Assert.assertEquals(loginPage.loginPageTitle(), "Instagram");
 		logger.info("Title Test Pass");
 		Assert.assertTrue(loginPage.loginPageLogo());
 		logger.info("Logo Test Pass");
-		logger.info("***** Verify Login Page Title And Logo Ends *****"); 
-	}
-	
-	@Test(priority=2, groups="smoke")
-	public void verifyLoginPageGooglePlayLink() {
-		logger.info("***** Verify Login Page Google Play Link Starts *****");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		Assert.assertTrue(loginPage.loginPageGooglePlayLink());
 		logger.info("Google Play Link Pass");
-		logger.info("***** Verify Login Page Google Play Link Ends *****"); 	
-	}
-	
-	@Test(priority=3, groups="smoke")
-	public void verifyLoginPageMicrosoftLink() {
-		logger.info("***** Verify Login Page Google Play Link Starts *****");
+		
 		Assert.assertTrue(loginPage.loginPageMicrosoftLink());
 		logger.info("Google Play Link Pass");
-		logger.info("***** Verify Login Page Google Play Link Ends *****"); 	
-	}
-	
-	@Test(priority=4, groups="smoke", enabled=true)
-	public void verifyLoginAppWithValiedCredentials() {
-		logger.info("***** Verify LoginApp With Valied Credentials Starts *****"); 
 		
-		homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
+		loginPage.loginApplication(mailID, password);
+		loginPage.clickOnLoginButton();	
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		homePage.clickInfoNotNowBtn();
 		homePage.clickNotNowBtn();
 		
 		Assert.assertTrue(homePage.homePageLogo());
-		//homePage.clickLogoutBtn();
+		
+		homePage.clickMoreBtn();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		homePage.clickLogoutBtn();
 		
 		notific=false;
-		logger.info("***** Verify LoginApp With Valied Credentials Ends *****");	
+		logger.info("***** Verify Login Page Ends *****");	
 	}
 	
 	@DataProvider
@@ -72,7 +70,8 @@ public class LoginPageTest extends BaseClass{
 	public void loginWithDifferentCrd(String username, String password, String scenario) {
 		logger.info("********* Verify Login Test with multiple data sets Starts**********"); 	
 		
-		homePage=loginPage.loginApplication(username, password);
+		loginPage.loginApplication(username, password);
+		homePage=loginPage.clickOnLoginButton();
 		
 		if(scenario.equals("bothcorrect")) {
 			Assert.assertTrue(homePage.checkSaveYourLoginNotification());

@@ -12,7 +12,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.instagram.qa.Utility.ExtentReporter;
 
 
-public class Listeners extends BaseClass implements ITestListener{
+public class Listeners extends BaseTest implements ITestListener{
 
 	ExtentReports extent=ExtentReporter.getReport();
 	ExtentTest test;

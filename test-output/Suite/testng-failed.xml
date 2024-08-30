@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="HPnumOfScroll" value="5"/>
   <listeners>
     <listener class-name="com.instagram.qa.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="ExecuteAllTC(failed)">
     <classes>
-      <class name="com.instagram.qa.PageTest.HomePageTest">
+      <class name="com.instagram.qa.PageTest.ReelsPageTest">
         <methods>
-          <include name="verifyHomePageTitle"/>
-          <include name="verifyUserName"/>
-          <include name="verifyHomePageLogo"/>
           <include name="loginApp"/>
           <include name="tearDown"/>
+          <include name="VerifytheScroolReels"/>
+          <include name="logoutApp"/>
           <include name="initialization"/>
-          <include name="verifyScrollAndLikePost"/>
+          <include name="verifyLikeFirstReel"/>
+        </methods>
+      </class> <!-- com.instagram.qa.PageTest.ReelsPageTest -->
+      <class name="com.instagram.qa.PageTest.CreatPageTest">
+        <methods>
+          <include name="loginApp"/>
+          <include name="closeCreatsPage"/>
+          <include name="verifyfileUploadInstagaram"/>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+        </methods>
+      </class> <!-- com.instagram.qa.PageTest.CreatPageTest -->
+      <class name="com.instagram.qa.PageTest.HomePageTest">
+        <methods>
+          <include name="verifyUserName"/>
+          <include name="tearDown"/>
+          <include name="loginApp"/>
+          <include name="logoutApp"/>
           <include name="verifyHomePagefirstPostLikeBtn"/>
+          <include name="verifyScrollAndLikePost" invocation-numbers="0"/>
+          <include name="initialization"/>
         </methods>
       </class> <!-- com.instagram.qa.PageTest.HomePageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- ExecuteAllTC(failed) -->
 </suite> <!-- Failed suite [Suite] -->

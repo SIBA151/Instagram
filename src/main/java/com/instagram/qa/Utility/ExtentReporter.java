@@ -1,5 +1,7 @@
 package com.instagram.qa.Utility;
 
+import java.util.Properties;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -8,6 +10,10 @@ public class ExtentReporter {
 
 	public static ExtentReports getReport() {
 		ConfigRead configRead=new ConfigRead();
+		
+		Properties instaPagesProperties = ConfigRead.getProValue("static_data");
+		
+		String browserName = instaPagesProperties.getProperty("browser");
 		
 		ExtentSparkReporter htmlReport= new ExtentSparkReporter(System.getProperty("user.dir")+"//Reports//Instagram_Result.html");
 		ExtentReports reports= new ExtentReports();
@@ -20,7 +26,7 @@ public class ExtentReporter {
 	    
 		reports.setSystemInfo("Machine", "Dell");
 		reports.setSystemInfo("OS", "Windos10");
-		reports.setSystemInfo("Browser", configRead.getBrowser());
+		reports.setSystemInfo("Browser", browserName);
 		
 		return reports;
 	}

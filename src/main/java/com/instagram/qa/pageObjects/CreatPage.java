@@ -1,45 +1,23 @@
 package com.instagram.qa.pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import com.instagram.qa.AbstractComponents.AbstractCompnent;
+import com.instagram.qa.AbstractComponents.BaseClass;
+import com.instagram.qa.AbstractComponents.Element;
 import com.instagram.qa.Utility.FileUpload;
 
-public class CreatPage extends AbstractCompnent{
-
-	WebDriver driver;
+public class CreatPage extends BaseClass{
 	
-	@FindBy(xpath="//div[text()='Create new post']")
-	WebElement creatPageLabel;
-	
-	@FindBy(xpath="//button[text()='Select from computer']")
-	WebElement uploadBtn;
-	
-	@FindBy(xpath="//div[text()='Next']")
-	WebElement nextBtn;
-	
-	@FindBy(xpath="//div[text()='Share']")
-	WebElement shareBtn;
+	By creatPageLabel=By.xpath("//div[text()='Create new post']");
+	By uploadBtn=By.xpath("//button[text()='Select from computer']");
+	By nextBtn=By.xpath("//div[text()='Next']");
+	By shareBtn=By.xpath("//div[text()='Share']");
+	By close=By.xpath("//div//*[@aria-label='Close']");
+	By successfulShared= By.xpath("//span[text()='Your post has been shared.']");
 		
 	
-	@FindBy(xpath="//div//*[@aria-label='Close']")
-	WebElement close;
-	
-	By successfulShared= By.xpath("//span[text()='Your post has been shared.']");
-	
-	
-	public CreatPage(WebDriver driver) {
-		super(driver);
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
-	
 	public void clickUploadBtn() {
-		uploadBtn.click();
+		Element.clickElm(uploadBtn);
 	}
 	
 	public void uploadPic(String name) {
@@ -47,20 +25,20 @@ public class CreatPage extends AbstractCompnent{
 	}
 	
 	public void clickNextBtn() {
-		nextBtn.click();
+		Element.clickElm(nextBtn);
 	}
 	
 	public void clickShareBtn() {
-		shareBtn.click();
+		Element.clickElm(shareBtn);
 	}
 
 	public boolean checkCreatPageLabel() {
-		return creatPageLabel.isDisplayed();
+		return Element.isDisplay(creatPageLabel);
 	}
 	
 	public boolean successfulSharedMsg() {
-		waitForElement(successfulShared);
-		return getElement(successfulShared).isDisplayed();
+		//waitForElement(successfulShared);
+		return Element.isDisplay(successfulShared);
 	}
 	
 	public void fileUploadInstagaram(String name) {
@@ -68,11 +46,11 @@ public class CreatPage extends AbstractCompnent{
 		uploadPic(name);
 		clickNextBtn();
 		clickNextBtn();
-		shareBtn.click();
+		Element.clickElm(shareBtn);
 	}
 	
 	public HomePage clickClosePage() {
-		close.click();
-		return new HomePage(driver);
+		Element.clickElm(close);
+		return new HomePage();
 	}
 }

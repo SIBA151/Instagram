@@ -1,91 +1,73 @@
 package com.instagram.qa.pageObjects;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 
-import com.instagram.qa.AbstractComponents.AbstractCompnent;
+import com.instagram.qa.AbstractComponents.BaseClass;
+import com.instagram.qa.AbstractComponents.Element;
 
-public class LoginPage extends AbstractCompnent{
-
-	WebDriver driver;
+public class LoginPage extends BaseClass{
 	
-	@FindBy(xpath="//label//input[@name='username']") 
-	WebElement userName;
+	By userNameBy=By.xpath("//label//input[@name='username']");
+	By passwordBy=By.name("password");	
+	By loginBtn=By.xpath("//div[text()='Log in']");
+	By logo=By.cssSelector("i[aria-label='Instagram']");
+	By errorMsg=By.xpath("//p[contains(text(),'your password was incorrect')]");
+	By ContinueBtn=By.xpath("//article[contains(@class, 'xkrivgy ')]//div[2]//div//div[2]//div//div//button//span[contains(text(), 'Continue as')]");
+	By googlePlayLink=By.xpath("//img[@alt='Get it on Google Play']");
+	By microsoftLink=By.xpath("//img[@alt='Get it from Microsoft']");
 	
-	@FindBy(name="password")
-	WebElement password;
 	
-	@FindBy(xpath="//div[text()='Log in']") 
-	WebElement loginBtn; 
 	
-	@FindBy(css="i[data-visualcompletion='css-img']")
-	WebElement logo;
-	
-	@FindBy(xpath="//p[contains(text(),'your password was incorrect')]")
-	WebElement errorMsg;
-	
-	@FindBy(xpath="//article[contains(@class, 'xkrivgy ')]//div[2]//div//div[2]//div//div//button//span[contains(text(), 'Continue as')]")
-	WebElement ContinueBtn;
-	
-	@FindBy(xpath="//img[@alt='Get it on Google Play']") 
-	WebElement googlePlayLink; 
-	
-	@FindBy(xpath="//img[@alt='Get it from Microsoft']") 
-	WebElement microsoftLink; 
-	
-	public LoginPage(WebDriver driver) {
-		super(driver);
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
+	public LoginPage loginApplication(String emailAdd, String pwd) {
+		Element.entryText(userNameBy, emailAdd);
+		Element.entryText(passwordBy, pwd);
+		return this;
 	}
 	
-	public HomePage loginApplication(String emailAdd, String pwd) {
-		 userName.sendKeys(emailAdd);
-		 password.sendKeys(pwd);
-		 loginBtn.click();
-		 return new HomePage(driver);
+	public HomePage clickOnLoginButton() {
+		Element.clickElm(loginBtn);
+		 return new HomePage();
 	}
 	
 	public String loginPageTitle() {
 		return driver.getTitle();
 	}
+	
 	public boolean loginPageLogo() {
-		return logo.isDisplayed();
+		return Element.isDisplay(logo);
 	}
 	
 	public boolean LoginPageLoginBtn() {
-		return loginBtn.isDisplayed();
+		return Element.isDisplay(loginBtn);
 	}
 	
 	public boolean loginPageErrorMsg() {
-		return errorMsg.isDisplayed();
+		return Element.isDisplay(errorMsg);
 	}
 	
 	public boolean loginPageContinueBtn() {
-		return ContinueBtn.isDisplayed();
+		return Element.isDisplay(ContinueBtn);
 	}
 	
 	public boolean loginPageGooglePlayLink() {
-		return googlePlayLink.isDisplayed();
+		return Element.isDisplay(googlePlayLink);
 	}
 	
 	public boolean loginPageMicrosoftLink() {
-		return microsoftLink.isDisplayed();
+		return Element.isDisplay(microsoftLink);
 	}
 	
 	public HomePage loginPageContinueBtnClick() {
-		 ContinueBtn.click();
-		 return new HomePage(driver);
+		Element.clickElm(ContinueBtn);
+		 return new HomePage();
 	}
 	
 	public void clearUserNameTxtField() {
-		 userName.clear();
+		Element.clearText(userNameBy);
 	}
 	
 	public void clearUserPasswordTxtField() {
-		password.clear();
+		Element.clearText(passwordBy);
 	}
 	public void clearCredentialTxt() {
 		clearUserNameTxtField();

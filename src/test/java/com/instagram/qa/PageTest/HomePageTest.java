@@ -6,31 +6,34 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.instagram.qa.TestComponents.BaseClass;
+import com.instagram.qa.TestComponents.BaseTest;
 import com.instagram.qa.pageObjects.HomePage;
 import com.instagram.qa.pageObjects.LoginPage;
 
-public class HomePageTest extends BaseClass {
+public class HomePageTest extends BaseTest {
 
-	LoginPage loginPage;
-	HomePage homePage;
+	LoginPage loginPage=new LoginPage();
+	HomePage homePage=new HomePage();
+	
+	String mailID = instaPagesProperties.getProperty("email");
+	String password=instaPagesProperties.getProperty("password");
+	String userName=instaPagesProperties.getProperty("username");
 	
 	@BeforeClass(alwaysRun=true)
-	public void loginApp() {
-		loginPage=new LoginPage(driver);
-		homePage=new HomePage(driver);
-		
+	public void loginApp() {		
 		if(notific) {
-		homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
+		loginPage.loginApplication(mailID, password);
+		loginPage.clickOnLoginButton();	
 		homePage.clickInfoNotNowBtn();
 		homePage.clickNotNowBtn();
 		}
 		
 	}
 	
-	@Test(priority=1, groups="smoke")
-	public void verifyHomePageTitleAndLogo() {
-		logger.info("***** TestCase Verify HomePage Title And Logo starts *****");
+	@Parameters("HPnumOfScroll")
+	@Test(groups="smoke")
+	public void verifyHomePageTC(int numScrool) {
+		logger.info("***** TestCase verifyHomePageTC start *****");
 		
 		Assert.assertEquals(homePage.homePageTitle(), "Instagram");
 		logger.info("HomePage Title Test pass");
@@ -38,46 +41,20 @@ public class HomePageTest extends BaseClass {
 		Assert.assertTrue(homePage.homePageLogo());	
 		logger.info("HomePage Logo Test pass");
 		
-		logger.info("***** TestCase Verify HomePageTitle And Logo Ends *****"); 
-	}
-	
-	
-	@Test(priority=3, groups="smoke")
-	public void verifyUserName() {
-		logger.info("***** TestCase Verify User Name starts *****"); 
-		Assert.assertEquals(homePage.getUserName(), prop.getUsernam());
-		logger.info("***** TestCase Verify User Name Ends *****"); 
-	}
-	
-	
-	
-	@Test(priority=4, groups="smoke")
-	public void verifyHomePagefirstPostLikeBtn() {
+		Assert.assertEquals(homePage.getUserName(), userName);
+		logger.info("***** TestCase Verify User Name End *****"); 
 
-		logger.info("***** TestCase verify HomePage first Post LikeBtn starts *****"); 
 		homePage.postLikeBtn(1);
 		//homePage.commentTextField(1, "Hii.");
-		Assert.assertEquals(homePage.getLikeColor(1),"rgb(255, 48, 64)");
-		logger.info("***** TestCase verify HomePage first Post LikeBtn Ends *****"); 
-	}
-	
-	@Test(priority=5)
-	@Parameters("HPnumOfScroll")
-	public void verifyScrollAndLikePost(int numScrool) {
-		logger.info("***** TestCase verify Scroll And Like Post starts *****"); 
+		Assert.assertEquals(homePage.getLikeColor(1),"0 0 48 48");
+		
 		homePage.scrollAndLike(numScrool);
 		Assert.assertEquals(homePage.getLikeColor(numScrool),"rgb(255, 48, 64)");
-		logger.info("***** TestCase verify Scroll And Like Post Ends *****"); 
 		
-	}
-	
-	@Test(priority=6, enabled=true)
-	public void verifyLogoutButtonTest() {
-		logger.info("***** TestCase Verify Logout Button Test starts *****"); 
 		homePage.clickLogoutBtn();
 		Assert.assertTrue(loginPage.LoginPageLoginBtn());
 		notLogout=false;
-		logger.info("***** TestCase Verify Logout Button Test Ends *****"); 
+		logger.info("***** TestCase verifyHomePageTC End *****"); 
 	}
 	
 	@AfterClass(alwaysRun=true)

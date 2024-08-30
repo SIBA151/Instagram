@@ -5,32 +5,34 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.instagram.qa.TestComponents.BaseClass;
+import com.instagram.qa.TestComponents.BaseTest;
 import com.instagram.qa.pageObjects.CreatPage;
 import com.instagram.qa.pageObjects.HomePage;
 import com.instagram.qa.pageObjects.LoginPage;
 
-public class CreatPageTest extends BaseClass {
+public class CreatPageTest extends BaseTest {
 	
 	
-	LoginPage loginPage;
-	HomePage homePage;
-	CreatPage creatPage;
+	LoginPage loginPage=new LoginPage();
+	HomePage homePage=new HomePage();
+	CreatPage creatPage = new CreatPage();
+	
+	String mailID = instaPagesProperties.getProperty("email");
+	String password=instaPagesProperties.getProperty("password");
 	
 	@BeforeClass(alwaysRun=true)
 	public void loginApp() {
-		loginPage=new LoginPage(driver);
-		homePage=new HomePage(driver);
 		
 		if(notific) {
-			homePage=loginPage.loginApplication(prop.getEmail(), prop.getPassword());
-			homePage.clickInfoNotNowBtn();
+			loginPage.loginApplication(mailID, password);
+			loginPage.clickOnLoginButton();	
 			if(notLogout) {
-			homePage.clickNotNowBtn();
+				homePage.clickInfoNotNowBtn();	
+			    homePage.clickNotNowBtn();
 			}
 		}
 		//Click Creats Page Button
-		creatPage=homePage.clickCreatsBtn();
+		homePage.clickCreatsBtn();
 		logger.info("Open Creat Page");
 	}
 	

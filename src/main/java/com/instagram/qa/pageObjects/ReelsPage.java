@@ -6,11 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-import com.instagram.qa.AbstractComponents.AbstractCompnent;
+import com.instagram.qa.AbstractComponents.BaseClass;
+import com.instagram.qa.AbstractComponents.Element;
 
-public class ReelsPage extends AbstractCompnent{
-
-	WebDriver driver;
+public class ReelsPage extends BaseClass{
 	
 	
 	//div[text()='Create new post']
@@ -21,31 +20,26 @@ public class ReelsPage extends AbstractCompnent{
 	By likeBy=By.xpath("//span//button[@type='button']//div[contains(@class,'_abl_')]");
 	By likeValue=By.xpath("//button[contains(@class, '_abl-')]//div//span//*[local-name()='svg']");
 	
-	public ReelsPage(WebDriver driver) {
-		super(driver);
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
-	
+		
 	public void clicklikeBtn() {
-		waitForElementToDisappear();
-		waitForElement(likeBy);
-		getElement(likeBy).click();	
+		//waitForElementToDisappear();
+		//waitForElement(likeBy);
+		Element.clickElm(likeBy);	
 	}
 	
 	public String likeBtnColor() {
-		waitForElementToDisappear();
-		waitForElement(likeValue);
-		return getElement(likeValue).getAttribute("aria-label");
+	//	waitForElementToDisappear();
+	//	waitForElement(likeValue);
+		return Element.getAttributeValue(likeValue, "aria-label");
 	}
 	
 	public WebElement scrollToElm(int elm) {
-		return getElement(reel(elm));
+		return Element.getElement(reel(elm));
 	}
 	
 
 	public void scrollReels(int elmNum) {		
-		waitForElement(reel(elmNum));		
+		//waitForElement(reel(elmNum));		
 		Actions action=new Actions(driver);
 		action.scrollToElement(scrollToElm(elmNum)).perform();
 		
